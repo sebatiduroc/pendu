@@ -242,10 +242,39 @@
   .message-bar.lose { color: var(--bad); }
   .message-bar.info { color: var(--muted); }
 
+  /* ── DEF BUTTON ── */
+  .def-btn-wrap {
+    margin-bottom: 1.2rem;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .def-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: none;
+  }
+  .def-btn.visible { display: inline-block; }
+  .def-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(232,255,71,0.05);
+  }
+
   /* ── GAME OVER ── */
   #screen-gameover .title { font-size: clamp(2rem,8vw,4rem); color: var(--bad); }
   .final-score { font-size: 5rem; font-weight: 800; color: var(--accent); line-height: 1; margin: 1rem 0; }
-  .final-level { font-family: 'IBM Plex Mono', monospace; color: var(--muted); font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 2rem; }
+  .final-level { font-family: 'IBM Plex Mono', monospace; color: var(--muted); font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
   .restart-btn {
     background: var(--accent);
     color: var(--bg);
@@ -278,7 +307,66 @@
     color: var(--muted);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    max-width: 480px;
+    width: 100%;
+    padding: 2rem;
+    animation: fadeIn 0.25s ease;
+    position: relative;
+  }
+  .modal-word {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.8rem;
+  }
+  .modal-def {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+  .modal-close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    transition: color 0.15s;
+  }
+  .modal-close:hover { color: var(--text); }
+  .modal-no-def {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    font-style: italic;
   }
 </style>
 </head>
@@ -287,7 +375,7 @@
 <!-- SCREEN: CHOICE -->
 <div id="screen-choice" class="screen active">
   <div class="title">MOTDIX</div>
-  <div class="subtitle">jeu de lettres · ODS</div>
+  <div class="subtitle">jeu de lettres</div>
   <div class="choice-label">Choisissez la longueur du mot</div>
   <div class="length-buttons">
     <button class="len-btn" data-len="7" data-label="lettres" onclick="startGame(7)">7</button>
@@ -309,7 +397,7 @@
       <div class="score-val" id="score-display">10</div>
       <div class="score-lbl">points</div>
     </div>
-    <div class="level-badge" id="level-display">A</div>
+    <div class="level-badge" id="level-display">1</div>
     <div class="score-block">
       <div class="score-val" id="wordlen-display" style="color:var(--muted)">7</div>
       <div class="score-lbl">lettres</div>
@@ -321,6 +409,10 @@
   <div class="word-display" id="word-display"></div>
   <div class="word-info" id="word-info"></div>
 
+  <div class="def-btn-wrap">
+    <button class="def-btn" id="def-btn-game" onclick="showDefinition()">📖 Définition</button>
+  </div>
+
   <div class="keyboard" id="keyboard"></div>
 </div>
 
@@ -328,14 +420,25 @@
 <div id="screen-gameover" class="screen">
   <div class="title">GAME OVER</div>
   <div class="final-score" id="go-score">0</div>
-  <div class="final-level" id="go-level">Niveau atteint : A</div>
+  <div class="final-level" id="go-level">Niveau atteint : 1</div>
+  <div class="def-btn-wrap" style="margin-bottom:1.5rem">
+    <button class="def-btn visible" id="def-btn-gameover" onclick="showDefinition()">📖 Définition du dernier mot</button>
+  </div>
   <button class="restart-btn" onclick="showChoice()">↩ Rejouer</button>
+</div>
+
+<!-- MODAL: DEFINITION -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-word" id="modal-word"></div>
+    <div class="modal-def" id="modal-def"></div>
+  </div>
 </div>
 
 <script>
 // ── STATE ──
-const LEVELS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-let dictionaries = {};   // cache { 7: [...], 8: [...], ... }
+let dictionaries = {};   // cache { 7: { words: [], defs: {} }, ... }
 let state = {
   score: 10,
   levelIdx: 0,
@@ -353,16 +456,72 @@ function showScreen(id) {
 }
 function showChoice() { showScreen('screen-choice'); }
 
-// ── LOAD DICTIONARY ──
+// ── LOAD DICTIONARY WITH DEFINITIONS ──
 async function loadDict(len) {
   if (dictionaries[len]) return dictionaries[len];
   const filename = `ODS${len}lettres.txt`;
   const resp = await fetch(filename);
   if (!resp.ok) throw new Error(`Impossible de charger ${filename}`);
   const text = await resp.text();
-  const words = text.split('\n').map(w => w.trim().toUpperCase()).filter(w => w.length === len);
-  dictionaries[len] = words;
-  return words;
+  const words = [];
+  const defs = {};
+  text.split('\n').forEach(line => {
+    const tab = line.indexOf('\t');
+    let word, def;
+    if (tab !== -1) {
+      word = line.slice(0, tab).trim().toUpperCase();
+      def  = line.slice(tab + 1).trim();
+    } else {
+      // fallback: first token only (no definition)
+      word = line.trim().toUpperCase();
+      def  = '';
+    }
+    if (word.length === len) {
+      words.push(word);
+      defs[word] = def;
+    }
+  });
+  dictionaries[len] = { words, defs };
+  return dictionaries[len];
+}
+
+// ── DEFINITION HELPERS ──
+function getDefinition(word) {
+  const cache = dictionaries[state.wordLen];
+  if (!cache) return '';
+  return cache.defs[word] || '';
+}
+
+function showDefinition() {
+  const word = state.word;
+  const def = getDefinition(word);
+  document.getElementById('modal-word').textContent = word;
+  if (def) {
+    document.getElementById('modal-def').innerHTML =
+      `<span>${def}</span>`;
+  } else {
+    document.getElementById('modal-def').innerHTML =
+      `<span class="modal-no-def">Définition non disponible.</span>`;
+  }
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modal-overlay') || e.currentTarget.tagName === 'BUTTON') {
+    document.getElementById('modal-overlay').classList.remove('open');
+  }
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('modal-overlay').classList.remove('open');
+});
+
+// ── DEF BUTTON VISIBILITY ──
+function showDefBtn() {
+  document.getElementById('def-btn-game').classList.add('visible');
+}
+function hideDefBtn() {
+  document.getElementById('def-btn-game').classList.remove('visible');
 }
 
 // ── START GAME ──
@@ -381,11 +540,12 @@ async function startGame(len) {
 }
 
 function pickNewWord() {
-  const words = dictionaries[state.wordLen];
+  const { words } = dictionaries[state.wordLen];
   state.word = words[Math.floor(Math.random() * words.length)];
   state.guessed = new Set();
   state.revealed = new Set();
   state.gameActive = true;
+  hideDefBtn();
   renderGame();
   showScreen('screen-game');
 }
@@ -396,7 +556,7 @@ function renderGame() {
   const scoreEl = document.getElementById('score-display');
   scoreEl.textContent = state.score;
   scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
-  document.getElementById('level-display').textContent = LEVELS[state.levelIdx];
+  document.getElementById('level-display').textContent = state.levelIdx + 1;
   document.getElementById('wordlen-display').textContent = state.wordLen;
 
   // Word slots
@@ -473,19 +633,20 @@ function guess(letter) {
     const allRevealed = [...state.word].every(l => state.revealed.has(l));
     if (allRevealed) {
       state.gameActive = false;
-      state.score += 5;
-      state.levelIdx = Math.min(state.levelIdx + 1, LEVELS.length - 1);
+      state.score += 4;
+      state.levelIdx += 1;
       document.getElementById('score-display').textContent = state.score;
-      document.getElementById('level-display').textContent = LEVELS[state.levelIdx];
+      document.getElementById('level-display').textContent = state.levelIdx + 1;
       msg.className = 'message-bar win';
-      msg.textContent = `🎉 Bravo ! +5 points — Niveau ${LEVELS[state.levelIdx]}`;
+      msg.textContent = `🎉 Bravo ! +4 points — Niveau ${state.levelIdx + 1}`;
+      showDefBtn();
       setTimeout(() => {
         if (state.score <= 0) {
           endGame();
         } else {
           pickNewWord();
         }
-      }, 1800);
+      }, 2500);
       return;
     }
   } else {
@@ -505,7 +666,8 @@ function guess(letter) {
       }
       msg.className = 'message-bar lose';
       msg.textContent = `Le mot était : ${state.word}`;
-      setTimeout(endGame, 2000);
+      showDefBtn();
+      setTimeout(endGame, 3000);
       renderKeyboard();
       return;
     }
@@ -520,7 +682,7 @@ function guess(letter) {
 function endGame() {
   document.getElementById('go-score').textContent = state.score;
   document.getElementById('go-level').textContent =
-    `Niveau atteint : ${LEVELS[state.levelIdx]}`;
+    `Niveau atteint : ${state.levelIdx + 1}`;
   showScreen('screen-gameover');
 }
 </script>
