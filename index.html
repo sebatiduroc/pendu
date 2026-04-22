@@ -710,10 +710,13 @@ function getDefinition(word) {
   return cache ? (cache.defs[word] || '') : '';
 }
 
-function showDefinition() {
+function showDefinition(hideWord = false) {
   const word = state.word;
   const def = getDefinition(word);
-  document.getElementById('modal-word').textContent = word;
+  const wordEl = document.getElementById('modal-word');
+  wordEl.textContent = hideWord ? '?' .repeat(word.length) : word;
+  wordEl.style.letterSpacing = hideWord ? '0.3em' : '';
+  wordEl.style.color = hideWord ? 'var(--muted)' : '';
   document.getElementById('modal-def').innerHTML = def
     ? `<span>${def}</span>`
     : `<span class="modal-no-def">Définition non disponible.</span>`;
@@ -724,7 +727,7 @@ function reportDefinition() {
   const word = state.word;
   const len = state.wordLen;
   const to = 's32.dumortier@gmail.com';
-  const subject = encodeURIComponent('MOTDIX - Vérifier une définition');
+  const subject = encodeURIComponent('Vérifier une définition');
   const body = encodeURIComponent(`Merci de vérifier la définition de ${word} dans les mots de ${len} lettres.`);
   window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 }
@@ -767,7 +770,7 @@ function confirmHint() {
   scoreEl.textContent = state.score;
   scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
   updateHintBtn();
-  showDefinition();
+  showDefinition(true);
 }
 
 // ── FONT SIZE: fill the line ──
