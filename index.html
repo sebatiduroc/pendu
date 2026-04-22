@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,17 +8,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0d0f14;
-    --surface: #161921;
-    --border: #2a2f3d;
+    --bg: #0e0b1a;
+    --surface: #17132a;
+    --border: #2e2850;
     --accent: #e8ff47;
-    --accent2: #ff6b47;
+    --accent2: #ff6b8a;
+    --accent3: #47e8ff;
     --text: #f0f2f5;
-    --muted: #5a6075;
-    --good: #47ffb2;
+    --muted: #6b6490;
+    --good: #5bffb8;
     --bad: #ff4769;
-    --used: #2a2f3d;
-    --used-text: #3d4357;
+    --used: #1e1a30;
+    --used-text: #3d3860;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,6 +36,21 @@
     overflow-x: hidden;
   }
 
+  /* Animated gradient blobs */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 20%, rgba(232,255,71,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(71,232,255,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 50% at 60% 30%, rgba(255,107,138,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+    animation: bgPulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes bgPulse { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+
   /* Grain overlay */
   body::before {
     content: '';
@@ -41,12 +58,12 @@
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
-    z-index: 100;
-    opacity: 0.4;
+    z-index: 101;
+    opacity: 0.35;
   }
 
   /* ── SCREEN MANAGEMENT ── */
-  .screen { display: none; width: 100%; max-width: 700px; padding: 2rem; animation: fadeIn 0.4s ease; }
+  .screen { display: none; width: 100%; max-width: 700px; padding: 2rem; animation: fadeIn 0.4s ease; position: relative; z-index: 1; }
   .screen.active { display: flex; flex-direction: column; align-items: center; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
@@ -56,8 +73,11 @@
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1;
-    color: var(--accent);
-    text-shadow: 0 0 60px rgba(232,255,71,0.25);
+    background: linear-gradient(135deg, var(--accent) 0%, #aaff00 50%, var(--accent3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 30px rgba(232,255,71,0.35));
     margin-bottom: 0.5rem;
   }
   .subtitle {
@@ -88,44 +108,60 @@
     width: 90px; height: 90px;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 4px;
+    border-radius: 8px;
     color: var(--text);
     font-family: 'Syne', sans-serif;
     font-size: 2rem;
     font-weight: 800;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1);
     position: relative;
     overflow: hidden;
+  }
+  .len-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent3) 100%);
+    opacity: 0;
+    transition: opacity 0.2s;
   }
   .len-btn::after {
     content: attr(data-label);
     position: absolute;
-    bottom: 6px;
-    right: 8px;
+    bottom: 6px; right: 8px;
     font-size: 0.6rem;
     font-family: 'IBM Plex Mono', monospace;
     color: var(--muted);
     letter-spacing: 0.05em;
+    z-index: 1;
   }
+  .len-btn span { position: relative; z-index: 1; }
+  .len-btn:hover::before { opacity: 1; }
   .len-btn:hover {
-    background: var(--accent);
     color: var(--bg);
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(232,255,71,0.3);
+    border-color: transparent;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(232,255,71,0.3), 0 0 0 1px rgba(232,255,71,0.2);
   }
-  .len-btn:hover::after { color: rgba(0,0,0,0.5); }
+  .len-btn:hover::after { color: rgba(0,0,0,0.4); }
 
-  /* ── GAME SCREEN ── */
+  /* ── GAME HEADER ── */
   .game-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     padding-bottom: 1.2rem;
     border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .game-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(232,255,71,0.3), rgba(71,232,255,0.3), transparent);
   }
   .score-block { text-align: center; }
   .score-val {
@@ -133,8 +169,9 @@
     font-weight: 800;
     line-height: 1;
     color: var(--accent);
+    text-shadow: 0 0 20px rgba(232,255,71,0.4);
   }
-  .score-val.danger { color: var(--bad); animation: pulse 0.8s ease infinite; }
+  .score-val.danger { color: var(--bad); text-shadow: 0 0 20px rgba(255,71,105,0.5); animation: pulse 0.8s ease infinite; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
   .score-lbl {
     font-family: 'IBM Plex Mono', monospace;
@@ -145,40 +182,114 @@
     margin-top: 2px;
   }
   .level-badge {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent) 0%, #aaff00 100%);
     color: var(--bg);
     font-weight: 800;
-    font-size: 1.8rem;
-    width: 52px; height: 52px;
-    border-radius: 50%;
+    font-size: 1.6rem;
+    min-width: 52px; height: 52px;
+    padding: 0 12px;
+    border-radius: 26px;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 20px rgba(232,255,71,0.4);
+    box-shadow: 0 0 24px rgba(232,255,71,0.45), inset 0 1px 0 rgba(255,255,255,0.2);
   }
 
   /* ── WORD DISPLAY ── */
   .word-display {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 0;
+    margin-bottom: 0.75rem;
+    justify-content: stretch;
+    width: 100%;
+    padding: 0 0.5rem;
   }
   .letter-slot {
-    width: 44px; height: 54px;
+    flex: 1;
+    height: 58px;
     border-bottom: 3px solid var(--border);
     display: flex; align-items: center; justify-content: center;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 1.6rem;
     font-weight: 600;
     color: var(--accent);
     transition: all 0.3s;
-    position: relative;
   }
   .letter-slot.revealed {
     border-color: var(--accent);
-    animation: pop 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    background: rgba(232,255,71,0.04);
+    animation: pop 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .letter-slot.revealed-fail {
+    border-color: var(--bad);
+    background: rgba(255,71,105,0.05);
+    color: var(--bad);
   }
   @keyframes pop { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+  /* ── MESSAGES ── */
+  .message-bar {
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s;
+  }
+  .message-bar.win { color: var(--good); }
+  .message-bar.lose { color: var(--bad); }
+  .message-bar.info { color: var(--muted); }
+
+  /* ── WORD INFO ── */
+  .word-info {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── ACTION BAR (Définition + Suivant) ── */
+  .action-bar {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    margin-bottom: 1rem;
+  }
+  .action-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.45rem 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: none;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+  }
+  .action-btn.visible { display: inline-block; }
+  .action-btn.def-btn:hover {
+    border-color: var(--accent3);
+    color: var(--accent3);
+    background: rgba(71,232,255,0.05);
+  }
+  .action-btn.next-btn {
+    background: linear-gradient(135deg, var(--accent) 0%, #aaff00 100%);
+    color: var(--bg);
+    border-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(232,255,71,0.3);
+  }
+  .action-btn.next-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(232,255,71,0.4);
+  }
 
   /* ── KEYBOARD ── */
   .keyboard {
@@ -188,16 +299,12 @@
     width: 100%;
     max-width: 540px;
   }
-  .kb-row {
-    display: flex;
-    justify-content: center;
-    gap: 0.35rem;
-  }
+  .kb-row { display: flex; justify-content: center; gap: 0.35rem; }
   .kb-key {
-    width: 44px; height: 44px;
+    width: 44px; height: 46px;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 4px;
+    border-radius: 6px;
     color: var(--text);
     font-family: 'Syne', sans-serif;
     font-size: 1rem;
@@ -205,18 +312,21 @@
     cursor: pointer;
     transition: all 0.12s;
     display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.3);
   }
-  .kb-key:hover:not(.used) {
-    background: var(--accent);
+  .kb-key:hover:not(.bad) {
+    background: linear-gradient(135deg, var(--accent), #aaff00);
     color: var(--bg);
-    border-color: var(--accent);
-    transform: scale(1.1);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(232,255,71,0.35);
   }
+  .kb-key:active:not(.bad) { transform: translateY(0); box-shadow: none; }
   .kb-key.good {
-    background: var(--good);
+    background: linear-gradient(135deg, var(--good), #00e5a0);
     color: var(--bg);
-    border-color: var(--good);
-    box-shadow: 0 0 12px rgba(71,255,178,0.3);
+    border-color: transparent;
+    box-shadow: 0 0 14px rgba(91,255,184,0.35);
   }
   .kb-key.bad {
     background: var(--used);
@@ -224,71 +334,69 @@
     color: var(--used-text);
     cursor: default;
     transform: none !important;
-  }
-
-  /* ── MESSAGES ── */
-  .message-bar {
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    margin-bottom: 1.5rem;
-    transition: all 0.3s;
-  }
-  .message-bar.win { color: var(--good); }
-  .message-bar.lose { color: var(--bad); }
-  .message-bar.info { color: var(--muted); }
-
-  /* ── DEF BUTTON ── */
-  .def-btn-wrap {
-    margin-bottom: 1.2rem;
-    min-height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .def-btn {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.4rem 1.1rem;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 0.15s;
-    display: none;
-  }
-  .def-btn.visible { display: inline-block; }
-  .def-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: rgba(232,255,71,0.05);
+    box-shadow: none;
   }
 
   /* ── GAME OVER ── */
-  #screen-gameover .title { font-size: clamp(2rem,8vw,4rem); color: var(--bad); }
-  .final-score { font-size: 5rem; font-weight: 800; color: var(--accent); line-height: 1; margin: 1rem 0; }
-  .final-level { font-family: 'IBM Plex Mono', monospace; color: var(--muted); font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+  .go-title {
+    font-size: clamp(3.5rem, 12vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--accent2) 0%, #ff9f47 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 30px rgba(255,107,138,0.4));
+    margin-bottom: 0.5rem;
+  }
+  .go-subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+  .final-level {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .final-level strong { color: var(--accent); font-size: 1.1rem; }
+  .go-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
   .restart-btn {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent) 0%, #aaff00 100%);
     color: var(--bg);
     border: none;
-    border-radius: 4px;
-    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    padding: 0.9rem 2.2rem;
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: 1.1rem;
     cursor: pointer;
     letter-spacing: 0.05em;
     transition: all 0.15s;
+    box-shadow: 0 4px 20px rgba(232,255,71,0.3);
   }
-  .restart-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(232,255,71,0.35); }
+  .restart-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(232,255,71,0.45); }
+  .go-def-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.9rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .go-def-btn:hover { border-color: var(--accent3); color: var(--accent3); background: rgba(71,232,255,0.05); }
 
   /* ── LOADING ── */
   .loading {
@@ -300,38 +408,36 @@
   }
   @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-  /* ── WORD LENGTH INDICATOR ── */
-  .word-info {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-
   /* ── MODAL ── */
   .modal-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.8);
     z-index: 200;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
   }
   .modal-overlay.open { display: flex; }
   .modal-box {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 12px;
     max-width: 480px;
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 2rem 1.8rem;
     animation: fadeIn 0.25s ease;
     position: relative;
+    box-shadow: 0 0 60px rgba(71,232,255,0.1), 0 0 120px rgba(232,255,71,0.06);
+  }
+  .modal-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent3), var(--accent2));
+    border-radius: 12px 12px 0 0;
   }
   .modal-word {
     font-family: 'IBM Plex Mono', monospace;
@@ -339,35 +445,24 @@
     font-weight: 600;
     color: var(--accent);
     letter-spacing: 0.15em;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(232,255,71,0.3);
   }
-  .modal-def {
-    font-size: 0.95rem;
-    color: var(--text);
-    line-height: 1.6;
-    opacity: 0.85;
-  }
+  .modal-def { font-size: 0.95rem; color: var(--text); line-height: 1.7; opacity: 0.85; }
   .modal-close {
     position: absolute;
-    top: 1rem; right: 1rem;
-    background: transparent;
+    top: 0.9rem; right: 0.9rem;
+    background: rgba(255,255,255,0.05);
     border: none;
     color: var(--muted);
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
-    line-height: 1;
-    padding: 0.2rem 0.4rem;
-    border-radius: 3px;
-    transition: color 0.15s;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.15s;
   }
-  .modal-close:hover { color: var(--text); }
-  .modal-no-def {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-top: 0.5rem;
-    font-style: italic;
-  }
+  .modal-close:hover { color: var(--text); background: rgba(255,255,255,0.1); }
+  .modal-no-def { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--muted); font-style: italic; }
 </style>
 </head>
 <body>
@@ -375,13 +470,13 @@
 <!-- SCREEN: CHOICE -->
 <div id="screen-choice" class="screen active">
   <div class="title">MOTDIX</div>
-  <div class="subtitle">jeu de lettres</div>
+  <div class="subtitle">jeu de lettres · ODS</div>
   <div class="choice-label">Choisissez la longueur du mot</div>
   <div class="length-buttons">
-    <button class="len-btn" data-len="7" data-label="lettres" onclick="startGame(7)">7</button>
-    <button class="len-btn" data-len="8" data-label="lettres" onclick="startGame(8)">8</button>
-    <button class="len-btn" data-len="9" data-label="lettres" onclick="startGame(9)">9</button>
-    <button class="len-btn" data-len="10" data-label="lettres" onclick="startGame(10)">10</button>
+    <button class="len-btn" data-len="7" data-label="lettres" onclick="startGame(7)"><span>7</span></button>
+    <button class="len-btn" data-len="8" data-label="lettres" onclick="startGame(8)"><span>8</span></button>
+    <button class="len-btn" data-len="9" data-label="lettres" onclick="startGame(9)"><span>9</span></button>
+    <button class="len-btn" data-len="10" data-label="lettres" onclick="startGame(10)"><span>10</span></button>
   </div>
 </div>
 
@@ -405,12 +500,12 @@
   </div>
 
   <div class="message-bar info" id="message-bar">Bonne chance !</div>
-
   <div class="word-display" id="word-display"></div>
   <div class="word-info" id="word-info"></div>
 
-  <div class="def-btn-wrap">
-    <button class="def-btn" id="def-btn-game" onclick="showDefinition()">📖 Définition</button>
+  <div class="action-bar">
+    <button class="action-btn def-btn" id="def-btn-game" onclick="showDefinition()">📖 Définition</button>
+    <button class="action-btn next-btn" id="next-btn" onclick="pickNewWord()">Suivant →</button>
   </div>
 
   <div class="keyboard" id="keyboard"></div>
@@ -418,13 +513,13 @@
 
 <!-- SCREEN: GAME OVER -->
 <div id="screen-gameover" class="screen">
-  <div class="title">GAME OVER</div>
-  <div class="final-score" id="go-score">0</div>
-  <div class="final-level" id="go-level">Niveau atteint : 1</div>
-  <div class="def-btn-wrap" style="margin-bottom:1.5rem">
-    <button class="def-btn visible" id="def-btn-gameover" onclick="showDefinition()">📖 Définition du dernier mot</button>
+  <div class="go-title">FINI !</div>
+  <div class="go-subtitle">fin de partie</div>
+  <div class="final-level" id="go-level">Niveau atteint : <strong>1</strong></div>
+  <div class="go-actions">
+    <button class="go-def-btn" onclick="showDefinition()">📖 Dernier mot</button>
+    <button class="restart-btn" onclick="showChoice()">↩ Rejouer</button>
   </div>
-  <button class="restart-btn" onclick="showChoice()">↩ Rejouer</button>
 </div>
 
 <!-- MODAL: DEFINITION -->
@@ -438,7 +533,7 @@
 
 <script>
 // ── STATE ──
-let dictionaries = {};   // cache { 7: { words: [], defs: {} }, ... }
+let dictionaries = {};
 let state = {
   score: 10,
   levelIdx: 0,
@@ -472,7 +567,6 @@ async function loadDict(len) {
       word = line.slice(0, tab).trim().toUpperCase();
       def  = line.slice(tab + 1).trim();
     } else {
-      // fallback: first token only (no definition)
       word = line.trim().toUpperCase();
       def  = '';
     }
@@ -485,24 +579,19 @@ async function loadDict(len) {
   return dictionaries[len];
 }
 
-// ── DEFINITION HELPERS ──
+// ── DEFINITION MODAL ──
 function getDefinition(word) {
   const cache = dictionaries[state.wordLen];
-  if (!cache) return '';
-  return cache.defs[word] || '';
+  return cache ? (cache.defs[word] || '') : '';
 }
 
 function showDefinition() {
   const word = state.word;
   const def = getDefinition(word);
   document.getElementById('modal-word').textContent = word;
-  if (def) {
-    document.getElementById('modal-def').innerHTML =
-      `<span>${def}</span>`;
-  } else {
-    document.getElementById('modal-def').innerHTML =
-      `<span class="modal-no-def">Définition non disponible.</span>`;
-  }
+  document.getElementById('modal-def').innerHTML = def
+    ? `<span>${def}</span>`
+    : `<span class="modal-no-def">Définition non disponible.</span>`;
   document.getElementById('modal-overlay').classList.add('open');
 }
 
@@ -511,17 +600,26 @@ function closeModal(e) {
     document.getElementById('modal-overlay').classList.remove('open');
   }
 }
-
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') document.getElementById('modal-overlay').classList.remove('open');
 });
 
-// ── DEF BUTTON VISIBILITY ──
-function showDefBtn() {
-  document.getElementById('def-btn-game').classList.add('visible');
+// ── ACTION BAR ──
+function setActionBar(showDef, showNext) {
+  document.getElementById('def-btn-game').classList.toggle('visible', showDef);
+  document.getElementById('next-btn').classList.toggle('visible', showNext);
 }
-function hideDefBtn() {
-  document.getElementById('def-btn-game').classList.remove('visible');
+
+// ── FONT SIZE: fill the line ──
+function fitWordSlots() {
+  const wd = document.getElementById('word-display');
+  const slots = wd.querySelectorAll('.letter-slot');
+  if (!slots.length) return;
+  const available = wd.clientWidth - 16;
+  let size = Math.floor(available / state.word.length * 0.68);
+  size = Math.min(size, 46);
+  size = Math.max(size, 14);
+  slots.forEach(s => s.style.fontSize = size + 'px');
 }
 
 // ── START GAME ──
@@ -545,21 +643,20 @@ function pickNewWord() {
   state.guessed = new Set();
   state.revealed = new Set();
   state.gameActive = true;
-  hideDefBtn();
+  setActionBar(false, false);
   renderGame();
   showScreen('screen-game');
+  requestAnimationFrame(fitWordSlots);
 }
 
 // ── RENDER ──
 function renderGame() {
-  // Header
   const scoreEl = document.getElementById('score-display');
   scoreEl.textContent = state.score;
   scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
   document.getElementById('level-display').textContent = state.levelIdx + 1;
   document.getElementById('wordlen-display').textContent = state.wordLen;
 
-  // Word slots
   const wd = document.getElementById('word-display');
   wd.innerHTML = '';
   for (let i = 0; i < state.word.length; i++) {
@@ -573,11 +670,9 @@ function renderGame() {
     wd.appendChild(slot);
   }
 
-  // Word info
   document.getElementById('word-info').textContent =
     `${state.word.length} lettres · ${[...state.revealed].length} trouvée(s)`;
 
-  // Keyboard
   renderKeyboard();
 }
 
@@ -592,7 +687,6 @@ function renderKeyboard() {
       const btn = document.createElement('button');
       btn.className = 'kb-key';
       btn.textContent = letter;
-      btn.id = `key-${letter}`;
       if (state.guessed.has(letter)) {
         btn.classList.add(state.word.includes(letter) ? 'good' : 'bad');
         btn.onclick = null;
@@ -611,25 +705,19 @@ function guess(letter) {
   if (state.guessed.has(letter)) return;
 
   state.guessed.add(letter);
-
   const msg = document.getElementById('message-bar');
 
   if (state.word.includes(letter)) {
     state.revealed.add(letter);
-    // Animate revealed slots
     for (let i = 0; i < state.word.length; i++) {
       if (state.word[i] === letter) {
         const slot = document.getElementById(`slot-${i}`);
-        if (slot) {
-          slot.textContent = letter;
-          slot.classList.add('revealed');
-        }
+        if (slot) { slot.textContent = letter; slot.classList.add('revealed'); }
       }
     }
     msg.className = 'message-bar win';
     msg.textContent = `✓ "${letter}" est dans le mot !`;
 
-    // Check win: all letters revealed
     const allRevealed = [...state.word].every(l => state.revealed.has(l));
     if (allRevealed) {
       state.gameActive = false;
@@ -639,36 +727,32 @@ function guess(letter) {
       document.getElementById('level-display').textContent = state.levelIdx + 1;
       msg.className = 'message-bar win';
       msg.textContent = `🎉 Bravo ! +4 points — Niveau ${state.levelIdx + 1}`;
-      showDefBtn();
-      setTimeout(() => {
-        if (state.score <= 0) {
-          endGame();
-        } else {
-          pickNewWord();
-        }
-      }, 2500);
+      setActionBar(true, true);
       return;
     }
   } else {
     state.score -= 1;
-    document.getElementById('score-display').textContent = state.score;
     const scoreEl = document.getElementById('score-display');
+    scoreEl.textContent = state.score;
     scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
     msg.className = 'message-bar lose';
     msg.textContent = `✗ "${letter}" n'est pas dans le mot. −1 point`;
 
     if (state.score <= 0) {
       state.gameActive = false;
-      // Reveal word
+      // Reveal remaining letters, colour them red
       for (let i = 0; i < state.word.length; i++) {
         const slot = document.getElementById(`slot-${i}`);
-        if (slot) { slot.textContent = state.word[i]; slot.classList.add('revealed'); }
+        if (slot) {
+          slot.textContent = state.word[i];
+          slot.classList.add(state.revealed.has(state.word[i]) ? 'revealed' : 'revealed-fail');
+        }
       }
       msg.className = 'message-bar lose';
       msg.textContent = `Le mot était : ${state.word}`;
-      showDefBtn();
-      setTimeout(endGame, 3000);
+      setActionBar(true, false);
       renderKeyboard();
+      setTimeout(endGame, 2200);
       return;
     }
   }
@@ -680,11 +764,12 @@ function guess(letter) {
 
 // ── END GAME ──
 function endGame() {
-  document.getElementById('go-score').textContent = state.score;
-  document.getElementById('go-level').textContent =
-    `Niveau atteint : ${state.levelIdx + 1}`;
+  document.getElementById('go-level').innerHTML =
+    `Niveau atteint : <strong>${state.levelIdx + 1}</strong>`;
   showScreen('screen-gameover');
 }
+
+window.addEventListener('resize', fitWordSlots);
 </script>
 </body>
 </html>
