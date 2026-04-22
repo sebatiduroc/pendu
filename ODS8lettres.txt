@@ -560,13 +560,13 @@ ARTIFICE	Engin.
 ARTISANE	Épouse d’un artisan,.
 ARVICOLE	Qui vit dans les champs labourés.
 ARYTHMIE	Absence de rythme régulier.
-ASCARIDE	Nom de famille.
+ASCARIDE	Ver parasite nématode du tube digestif des mammifères et des oiseaux.
 ASHANTIS	Ethnie du Ghana.
 ASIARQUE	Magistrat associé au sacerdoce et présidant les jeux sacrés que célébraient en commun les villes grecques d'Asie.
 ASILAIRE	Relatif à l’asile, à l’hôpital psychiatrique.
 ASINERIE	Ânerie (étable pour les ânes).
 ASOCIALE	Femme qui éprouve des difficultés à s’adapter à la vie sociale.
-ASPERGER	Nom de famille autrichien.
+ASPERGER	Projeter un liquide en fines gouttelettes sur quelque chose ou quelqu'un.
 ASPERGES	Variante de’' aspergès.
 ASPERMIE	Absence de graine.
 ASPHALTE	La chaussée elle-même.
@@ -722,7 +722,7 @@ BABYBOUM	Période pendant laquelle une population voit une explosion exceptionne
 BABYFOOT	Équipement permettant de jouer à ce jeu.
 BACCARAT	Canton français, situé dans le département de la Meurthe-et-Moselle.
 BACHASSE	Auge, cuvette, bassin.
-BACHELOR	Nom de famille.
+BACHELOR	Grade universitaire correspondant à la licence, premier cycle de l'enseignement supérieur dans les pays anglo-saxons.
 BACHIQUE	Relatif au vin.
 BACHKIRE	Habitante de Bachkirie.
 BACHOLLE	Casserole de cuivre qui servait à transvider la pâte.
@@ -751,7 +751,6 @@ BAHUTAGE	Accueil des conscouères par la khomiss des anciens.
 BAIGNADE	Action de se baigner.
 BAIGNANT	Celui qui prend un bain.
 BAIGNEUR	Celui qui se baigne.
-BAILLAIS	Nom de famille.
 BAILLEUR	Qui baille.
 BAILLIVE	, .
 BAISABLE	Qui est attirant·e, avec qui l’on souhaite avoir des rapports sexuels.
@@ -810,17 +809,16 @@ BARBAQUE	ou Viande.
 BARBARIE	Ancienne dénomination du Maghreb.
 BARBASSE	Barbe abondante, épaisse et peu soignée.
 BARBECUE	Gril de plein air.
-BARBETTE	Nom de famille.
+BARBETTE	Plate-forme surélevée derrière un parapet, permettant le tir par-dessus.
 BARBICHE	Un des noms vernaculaires de la nigelle de Damas.
 BARBICHU	Un des noms français du Nain Tracassin (allemand Rumpelstilzchen, anglais Rumplestiltskin), créature surnaturelle du folklore germanique médiéval, qui a inspiré et donné son nom au personnage du conte populaire allemand recueilli par les dans le premier volume de leurs Contes de l’enfance et du foyer (Kinder- und Hausmärchen, 1812).
 BARBILLE	Filament au flan des monnaies.
 BARBITAL	Barbiturique utilisé comme somnifère.
 BARBOTER	Voler.
-BARBOTIN	Nom de famille.
+BARBOTIN	Roue dentée d'un treuil ou d'une chaîne d'ancre.
 BARBOUZE	Barbe.
 BARCASSE	Grande chaloupe.
 BARDELLE	Mule.
-BAREFOOT	Nom de famille.
 BARILLET	Petit baril.
 BARIOLER	Peindre ou assembler diverses couleurs mises sans règle ou d’une manière bizarre, peu harmonieuse.
 BARISIEN	Relatif à Barisis, commune française située dans le département de l’Aisne.
@@ -832,8 +830,8 @@ BARONNIE	Seigneurie qui donnait au possesseur le titre de baron.
 BAROUDER	Participer à un baroud, une bataille.
 BAROUFLE	Agitation bruyante, chaos impliquant un mouvement désordonné réalisé par de multiples personnes.
 BAROULER	Tomber en roulant sur soi-même, faire la culbute.
-BARRANCO	Nom de famille.
-BARRETTE	Nom de famille.
+BARRANCO	Ravin encaissé à flanc de montagne, notamment en Espagne et en Amérique latine.
+BARRETTE	Petite barre ou pince servant à maintenir les cheveux.
 BARREUSE	Celle qui tient la barre du gouvernail.
 BARRICOT	Baril, petite barrique.
 BARRIQUE	Personne très grosse.
@@ -857,7 +855,7 @@ BASTIAIS	Relatif à Bastia, commune française située dans le département de l
 BASTIDON	Habitant de La Bâtie-Neuve, commune française située dans le département des Hautes-Alpes.
 BASTILLE	Célèbre château-fort de Paris, devenu prison d’État, qui fut pris par le peuple et détruit en 1789.
 BATACLAN	Salle de spectacle française située dans le XI arrondissement de Paris.
-BATAILLE	Nom de famille.
+BATAILLE	Engagement militaire entre deux armées adverses.
 BATAYOLE	Balustrade formant garde-fou au bord du pont d’un navire.
 BATELAGE	Conduite d'un bateau.
 BATELEUR	Arcane majeur du tarot de Marseille et de ses dérivés, marqué du numéro un, représentant traditionnellement un jeune homme chapeauté, baguette à la main, debout devant un établi où sont disposés divers objets symboliques (gobelets, dés, couteaux…), et auquel on attribue entre autres comme signification un point de départ, une énergie créatrice, un potentiel à réaliser ou encore l’inexpérience.
@@ -870,7 +868,7 @@ BATTERIE	Méthode d’élevage intensif.
 BATTEUSE	Mitrailleuse.
 BATTISSE	Babeurre, le sous-produit du beurre.
 BATUCADA	Groupe jouant ce style musical.
-BAUDRIER	Nom de famille.
+BAUDRIER	Bande de cuir ou d'étoffe portée en bandoulière pour soutenir une arme.
 BAUDROIE	Poisson osseux marin, à tête énorme, au corps oblong et presque cylindrique, vivant le long des côtes d’Europe et d’Amérique.
 BAUHINIA	Légumineuse de la tribu des Césalpinées, poussant dans les régions tropicales, renfermant une soixante d’espèces et dont les racines sont vermifuges et carminatives.
 BAVARDER	Parler sans mesure et sans discrétion.
@@ -889,12 +887,12 @@ BEDONNER	Résonner.
 BELCANTO	Style de fondé sur la beauté du timbre et la recherche d’une certaine virtuosité vocale.
 BELLOTTE	Enfant dotée d’une certaine beauté.
 BELOTEUR	Celui qui joue à la belote.
-BENJAMIN	Nom de famille.
+BENJAMIN	Le plus jeune enfant d'une famille ; par extension, le plus jeune membre d'un groupe.
 BENZOATE	Sel formé par la combinaison de l’acide benzoïque avec une base.
-BERBERES	Nom de famille.
+BERBERES	Populations autochtones d'Afrique du Nord, aussi appelées Amazighs.
 BERCEUSE	Femme chargée de bercer un enfant.
 BERGERAC	Vin de la région de Bergerac.
-BERGERIE	Nom de famille.
+BERGERIE	Bâtiment où l'on loge les moutons.
 BERIMBAU	Instrument de musique à corde qui sert pour accompagner la capoeira.
 BERNACHE	Oie sauvage, palmipède migrateur.
 BERNEUSE	Celle qui berne.
@@ -934,7 +932,7 @@ BIDONNER	Truquer.
 BIENFAIT	Bien qu’on fait à quelqu’un, service, bon office que l’on rend, grâce, faveur que l’on accorde.
 BIENNALE	Manifestation qui se déroule une fois tous les deux ans.
 BIENNOIS	Habitant de Bienne en Suisse.
-BIENVENU	Nom de famille.
+BIENVENU	Accueilli avec plaisir, le bienvenu.
 BIFACIAL	De biface ; relatif ou similaire au biface.
 BIFFETON	Argent.
 BIGARADE	Fruit du bigaradier ().
@@ -1045,7 +1043,7 @@ BONBONNE	Grand récipient pour les liquides, les gaz.
 BONDELLE	Désigne différentes espèces de poissons de fond de lacs de la famille des salmonidés, des corégones, tel que le corégone oxyrhynque.
 BONELLIE	Genre de vers marins annélides de la classe des échiuriens et de la famille des bonelliidés, qui présente un dimorphisme sexuel extrême: la femelle, qui vit enfouie dans le sable, avale en entier des dizaines de mâles minuscules qui vont se loger dans l'utérus et féconder in situ les ovules qu'elle produit (genre Bonellia).
 BONHOMIE	Simplicité excessive, extrême crédulité.
-BONHOMME	Nom de famille français.
+BONHOMME	Homme simple et bon ; figure représentant un personnage.
 BONICHES	Commune d’Espagne, située dans la province de Cuenca et la Communauté autonome de Castille-La Manche.
 BONICHON	Chapeau en forme de petit bonnet.
 BONIFACE	Personne bonne tout en étant simple et crédule.
@@ -1061,7 +1059,7 @@ BONZESSE	Religieuse bouddhiste.
 BORACITE	Minerai de bore de formule .
 BORDAGER	Exploitant agricole d’un bordage.
 BORDELLE	Prostituée.
-BORDERIE	Nom de famille.
+BORDERIE	Petite exploitation agricole exploitée en bordage.
 BORDIGUE	Espace compris entre ces claies.
 BORDURER	Mettre une bordure à.
 BORNOYER	Placer des jalons pour construire, disposer en ligne droite.
@@ -1077,8 +1075,7 @@ BOTTEUSE	Joueuse chargée des coups de pied lors des phases statiques (coup d’
 BOUBOULE	Surnom parfois donné à une personne ayant une surcharge pondérale. À l'origine plutôt affectueux, neutre ou insultant selon le cas, mais de plus en plus considéré comme inconvenant aujourd'hui.
 BOUCANER	Sentir mauvais.
 BOUCHAGE	Action de boucher.
-BOUCHAIN	Nom de famille.
-BOUCHAIT	Nom de famille.
+BOUCHAIN	Partie du fond d'un navire qui se raccorde aux flancs.
 BOUCHEUR	Qui bouche.
 BOUCHOIR	Commune française du département de la Somme.
 BOUCHURE	Clôture.
@@ -1086,14 +1083,14 @@ BOUCLAGE	Passage en boucle.
 BOUCLIER	Race de pigeon.
 BOUDERIE	Action de bouder ; état d’une personne qui boude.
 BOUDINER	Avoir une relation sexuelle.
-BOUFFANT	Nom de famille.
+BOUFFANT	Qui gonfle, forme une masse volumineuse, en parlant d'un vêtement ou d'une coiffure.
 BOUFFEUR	Anticlérical
 BOUGEOIR	Chandelier bas, sans fût, se présentant comme une bobèche fixée sur un pied en forme de coupe et comportant une prise pour son transport.
 BOUGRINE	Gros manteau, généralement porté en hiver.
 BOUIBOUI	Débit de boissons.
 BOUILLIE	Tous mélanges pâteux même obtenus à froid.
 BOUILLIR	Porter à ébullition.
-BOUILLON	Nom de famille.
+BOUILLON	Liquide obtenu en faisant bouillir de la viande ou des légumes dans de l'eau.
 BOUINAIS	Relatif à Bouin, commune française située dans le département de la Vendée.
 BOUJARON	Sodomite, bougre.
 BOUKAROU	Case ronde construite en dur, au toit de chaume conique, utilisée traditionnellement au nord du Cameroun et au Tchad.
@@ -1150,20 +1147,19 @@ BRAIMENT	Cri de l’âne.
 BRAINOIS	Relatif à Brainans, commune française située dans le département du Jura.
 BRAISAGE	Critique ; commérage.
 BRANCARD	Civière.
-BRANCHAT	Nom de famille.
 BRANCHER	Intéresser.
 BRANCHES	Commune française, située dans le département de l’Yonne.
 BRANCHIE	Ouverture en forme d’oreille que les poissons ont de chaque côté de la tête et qui donne issue à l’eau qui est entrée dans leur bouche pour la respiration.
 BRANDADE	Injure inexplicable.
-BRANLANT	Nom de famille.
+BRANLANT	Qui branle, qui manque de stabilité, vacillant.
 BRANLEUR	Onaniste.
 BRANLEUX	Pauvre type, bon à rien.
 BRAQUAGE	Extorsion effectuée avec la menace ou l’usage d’une arme.
 BRAQUEUR	Celui qui attaque à main armée dans l’intention de voler.
 BRASQUER	Enduire de brasque.
 BRASSAGE	Mélange.
-BRASSARD	Nom de famille, d’origine ancien français, mais généralement trouvé au Québec.
-BRASSEUR	Nom de famille.
+BRASSARD	Bande d'étoffe ou insigne porté autour du bras.
+BRASSEUR	Fabricant de bière ; personne qui brasse.
 BRASSIER	Ouvrier le plus souvent agricole qui travaillait de ses bras et était employé à la journée.
 BRAVACHE	Faux brave, fanfaron.
 BRAVERIE	Fanfaronnade d’un brave.
@@ -1238,14 +1234,13 @@ BRUMAIRE	Le second mois du calendrier républicain ; il allait du 23 octobre au 
 BRUMISER	Envoyer sur (quelque chose) des gouttelettes très fines.
 BRUNANTE	Déclin du jour, crépuscule.
 BRUNCHER	Prendre un brunch.
-BRUNELLE	Nom de famille.
+BRUNELLE	Plante herbacée de la famille des Lamiacées, à fleurs violettes.
 BRUNETTE	Jeune fille brune.
 BRUNOISE	Ensemble de légumes coupés en dés de petite taille et pouvant servir de garniture.
 BRUSHING	Mise en forme temporaire de la chevelure à chaud, avec un séchoir et une brosse.
 BRUSQUER	L'emporter d’emblée.
 BRUXISME	Pathologie entrainant un grincement des dents ou une contracture soutenue de la mâchoire.
 BUANDIER	Personne qui fait le premier blanchiment des toiles neuves.
-BUCAILLE	Nom de famille.
 BUDDLEIA	Buddleja, genre d’arbrisseaux de la famille des Scrophulariaceae.
 BUFFLAGE	Action de buffler (polir ou poncer avec un buffle).
 BUGLOSSE	Plante médicinale de la famille des boraginées.
@@ -1305,7 +1300,6 @@ CACAOYER	Relatif au cacao ou au cacaoyer.
 CACARDER	Bavasser, cancaner.
 CACATOIS	Voile de ce mât.
 CACHALOT	Espèce de mammifère marin, cétacé à dents à grosse tête carrée, de la famille des physétéridés.
-CACHETAS	Nom de famille.
 CACHETER	Fermer avec un cachet ; appliquer un cachet sur quelque chose.
 CACHETON	Médicament sous forme de cachet ou de pilule.
 CACHETTE	Cachotterie.
@@ -1329,8 +1323,7 @@ CAILLAGE	Action de cailler ; état de ce qui est caillé.
 CAILLAIS	Habitant de Cailla, commune française située dans le département de l’Aude.
 CAILLANT	Très froid.
 CAILLERA	Individu considéré comme méprisable.
-CAILLIEZ	Nom de famille.
-CAILLOUX	Nom de famille.
+CAILLOUX	Pierres de petite taille, fragments de roche.
 CAISSIER	Personne qui fabrique des caisses.
 CAJOLANT	Qui cherche à cajoler.
 CAJOLEUR	Celui qui cajole.
@@ -1382,7 +1375,7 @@ CAMELOTE	De mauvaise qualité.
 CAMISARD	Protestant trop zélé.
 CAMISOLE	Camisole de force.
 CAMOUFLE	Lampe.
-CAMPAGNE	Nom de famille.
+CAMPAGNE	Étendue de terre plate et découverte à la végétation ouverte ; espace rural.
 CAMPECHE	État du Mexique.
 CAMPEUSE	Personne qui campe, qui pratique le camping.
 CAMPHRER	Imprégner de camphre.
@@ -1465,12 +1458,12 @@ CARDASSE	Grosse carde.
 CARDERIE	Fabrique où l’on carde la laine.
 CARDEUSE	Ouvrière qui carde.
 CARDIGAN	Ville et communauté du Pays de Galles situé dans l’autorité unitaire de Ceredigion.
-CARDINAL	Nom de famille.
+CARDINAL	Prélat catholique de haut rang, conseiller du pape.
 CARENCER	Provoquer une carence chez (quelqu’un).
 CARESSER	Frôler.
 CARIACOU	Boisson fermentée préparée à partir de sirop de canne, de cassave et de patates.
 CARICOLE	Nom donné en Belgique au bigorneau, et beaucoup plus tard au bulot, mot associé à la tradition des marchands ambulants à Bruxelles.
-CARIGNAN	Nom de famille.
+CARIGNAN	Cépage rouge du sud de la France et de la péninsule ibérique.
 CARILLON	Crierie, grand bruit.
 CARINATE	Un oiseau disposant en principe d’une extension du sternum en Y appelé bréchet, la quille étant appelée carina, ce qui donne un bon appui aux muscles du vol.
 CARLISME	Opinion politique des personnes attachées à .
@@ -1497,7 +1490,7 @@ CARTERIE	Commerce de cartes postales.
 CARTHAME	Carthame des teinturiers.
 CARYOPSE	Fruit sec typique des graminées, indéhiscent, dans lequel le péricarpe est soudé à l'unique graine qu'il contient.
 CASANIER	Qui aime demeurer chez lui.
-CASANOVA	Nom de famille.
+CASANOVA	Homme qui séduit de nombreuses femmes ; don juan.
 CASAQUIN	Vêtement de dessus à l’usage des hommes.
 CASCADER	Enchainer.
 CASCADES	Région du Burkina Faso.
@@ -1509,10 +1502,10 @@ CASSERIE	Ensemble des ustensiles de ménage en fer battu étamé.
 CASSETIN	Chacune des petites cases ou cellules de différentes grandeurs qui divisent une casse d’imprimerie.
 CASSETTE	Insert à bois.
 CASSEUSE	Vandale, personne qui saccage.
-CASTAGNE	Nom de famille.
+CASTAGNE	Bagarre, rixe, en argot français.
 CASTELET	Sorte de couveuse pour les œufs de ver à soie.
 CASTEUSE	Femme qui fait passer un casting.
-CASTILLE	Nom de famille.
+CASTILLE	Région historique du centre de l'Espagne.
 CASTRAIS	Habitant de Castres, commune française située dans le département du Tarn.
 CASTRANT	Qui castre.
 CASUISTE	Celui qui s’occupe de casuistique.
@@ -1527,7 +1520,7 @@ CATERING	Cantine d'avion ou de spectacle.
 CATILLAC	Nom donné à une poire, ainsi qu'à une espèce de pêche.
 CATIMINI	Manigance, agissement secret.
 CATTLEYA	Orchidée du genre Cattleya, originaire des forêts tropicales d’Amérique centrale et du Sud qui comprend plus de 150 espèces.
-CAUCHOIS	Nom de famille.
+CAUCHOIS	Qui est relatif au pays de Caux, en Normandie.
 CAUDALIE	Mesure de la persistance aromatique du vin, en secondes.
 CAUDILLO	(Toujours précédé de l’article défini le) Titre officiel pris par en 1936.
 CAUDINES	Ne s’utilise pratiquement que dans l’expression passer sous les fourches caudines.
@@ -1537,7 +1530,7 @@ CAUSERIE	Entretien familier.
 CAUSETTE	Petite causerie.
 CAVALANT	Qui cavale, qui court.
 CAVALEUR	Celui qui mène une vie de débauche, qui recherche les aventures amoureuses.
-CAVALIER	Nom de famille.
+CAVALIER	Personne qui monte à cheval ; pièce du jeu d'échecs.
 CAVATINE	Air d’opéra, ordinairement assez court, qui n’a ni reprise ni seconde partie.
 CAVICOLE	Qui vit ou croît dans les cavités.
 CEIGNANT	Qui ceint.
@@ -1568,7 +1561,7 @@ CERCLAGE	Jante
 CERCUEIL	Ancien nom de la commune française Cerville.
 CERFEUIL	Nom donné à d'autres Apiacées que Anthriscus cerefolium citée en premier, notamment à Myrrhis odorata connu sous les noms de cerfeuil musqué, cerfeuil anisé ou cerfeuil d'Espagne qui est une plante comestible.
 CERISAIE	Lieu planté de cerisiers.
-CERISIER	Nom de famille.
+CERISIER	Arbre fruitier de la famille des Rosacées qui produit les cerises.
 CERNABLE	Que l’on peut cerner.
 CERVELAS	Espèce de basson dont les tuyaux sont repliés dans une boite cylindrique.
 CERVELET	Partie postérieure de l'encéphale, en arrière du cerveau.
@@ -1599,7 +1592,7 @@ CHAMELLE	Femelle du chameau.
 CHAMELON	Petit du chameau.
 CHAMOTTE	Argile brute cuite, broyée et tamisée, utilisée pour la fabrication de briques réfractaires.
 CHAMPART	Droit qu’avaient certains seigneurs de fiefs de lever, à leur profit, une certaine quantité de gerbes dans leurs censives. Le champart était d’environ une gerbe sur huit.
-CHAMPION	Nom de famille.
+CHAMPION	Vainqueur d'une compétition ; personne qui excelle dans un domaine.
 CHANCEUX	Qui est favorisé par la chance.
 CHANDAIL	Maillot en tricot de laine.
 CHANGEUR	Qui fait changer.
@@ -1614,7 +1607,7 @@ CHAOURCE	Fromage au lait cru, à pâte molle et à croûte fleurie, produit dans
 CHAPELAT	Relatif à Chapelle-Vallon, commune française située dans le département de l’Aube.
 CHAPELER	Tailler en enlevant le dessus.
 CHAPELET	Couronne de roses, de fleurs.
-CHAPELLE	Nom de famille.
+CHAPELLE	Petite église ou oratoire ; partie d'une église possédant un autel secondaire.
 CHAPERON	Chaperon.
 CHAPITRE	Division
 CHAPONNE	castrée que l’on engraisse.
@@ -1625,10 +1618,10 @@ CHARISME	Depuis 1971, désigne le caractère collectif de cette qualité appliqu
 CHARITES	Déesses personnifiant la vie dans toute sa plénitude.
 CHARMANT	Ancienne commune française, située dans le département de la Charente intégrée à la commune de Boisné-la-Tude en janvier 2016.
 CHARMEUR	Qui use de charmes ou qui fascine.
-CHARNIER	Nom de famille.
+CHARNIER	Lieu où sont entassés des cadavres ou des ossements.
 CHARNURE	La chair, les parties charnues, des personnes, considérées selon les différentes qualités qu’elles peuvent avoir.
 CHAROGNE	Corps de bête morte abandonné et corrompu.
-CHARRIER	Nom de famille.
+CHARRIER	Transporter en grande quantité ; emporter avec soi.
 CHARRIOT	(chariot est l’orthographe traditionnelle).
 CHARRUER	Passer à la charrue, labourer.
 CHASSAGE	Galerie d’allongement tracée suivant la direction des couches.
@@ -1652,7 +1645,7 @@ CHAUMARD	Pièce d’accastillage de bateau utilisée pour guider une amarre.
 CHAUMIER	Monticule de chaume.
 CHAUMINE	Chaumière.
 CHAUSSER	Porter.
-CHAUSSON	Nom de famille.
+CHAUSSON	Chaussure souple portée à l'intérieur ; chausson de danse.
 CHAUVINE	Femme qui est chauvine.
 CHAVANDE	Bûcher que l'on brûle chaque année sur les sommets des hautes vallées de la Meurthe, Moselle, de la Moselotte et de la Thur, pour marquer le solstice d'été.
 CHAVIRER	Renverser.
@@ -1674,7 +1667,7 @@ CHEVALIN	Qui rappelle les traits d’un cheval.
 CHEVERNY	Vin de Cheverny.
 CHEVESNE	Poisson osseux d’eau douce très fréquent en Europe, aux grosses écailles, à bouche large et au dos généralement foncé (gris-noir).
 CHEVILLE	Andouillers.
-CHEVREAU	Nom de famille.
+CHEVREAU	Petit de la chèvre ; cuir fait de sa peau.
 CHEVRIER	Commune française, située dans le département de la Haute-Savoie.
 CHIADEUR	Élève ou étudiant qui chiade, bûcheur.
 CHIALAGE	Pleur.
@@ -1793,7 +1786,7 @@ CLAUSTRO	Synonyme de claustrophobe.
 CLAUSULE	Vers final d'une strophe.
 CLAVAIRE	Champignon se développant de façon ramifiée, souvent réputés non-comestibles ou comestibles médiocres.
 CLAVECIN	Instrument de musique, longue épinette à un ou plusieurs claviers dont les cordes sont de métal.
-CLAVELIN	Nom de famille.
+CLAVELIN	Petite bouteille de 62 cl utilisée pour le vin jaune du Jura.
 CLAVETER	Fixer ensemble par des clavettes.
 CLAVETTE	Commune française, située dans le département de la Charente-Maritime.
 CLAVIERS	Commune française, située dans le département du Var.
@@ -1824,7 +1817,7 @@ CLOSERIE	Petit domaine clos.
 CLOUEUSE	Outil pour enfoncer les clous.
 CLOUTAGE	Action de clouter.
 CLOUTARD	Élève de l’École normale supérieure de Saint-Cloud, dans les Hauts-de-Seine.
-CLOUTIER	Nom de famille.
+CLOUTIER	Artisan qui fabrique ou vend des clous.
 CLOVISSE	Petit mollusque comestible à coque bivalve ; palourde.
 CLUBBEUR	Celui qui va habituellement en boîte de nuit.
 CLUBBING	Activité consistant à fréquenter les boîtes de nuit.
@@ -1879,7 +1872,6 @@ COLCRETE	Type de béton utilisé anciennement, composé de gros granulats secs d
 COLEADER	Leader associé.
 COLESLAW	Salade constituée de chou cru râpé et quelquefois de carottes, de poivrons et d’oignons râpés, ayant reposé quelques heures au frigo dans un mélange de sucre et de sel, de mayonnaise ou de vinaigre.
 COLICINE	Famille de bactériocines (toxine polypeptidique) produite par des entérobactéries comme par exemple Escherichia coli. Ces toxines ont pour rôle d'inhiber la croissance d'autres bactéries.
-COLINEAU	Nom de famille.
 COLISAGE	Action de coliser, résultat de cette action.
 COLLABLE	Collant.
 COLLANTE	Relevé de notes à un examen scolaire ou universitaire.
@@ -1888,7 +1880,6 @@ COLLATIF	Qui est susceptible d’être conféré.
 COLLECTE	Recensement.
 COLLETER	Se battre.
 COLLETIN	Pièce d’armure qui protège le cou et les épaules.
-COLLETTE	Nom de famille.
 COLLEUSE	Appareil permettant d’effectuer des opérations de collage.
 COLLIGER	Recueillir ou rassembler des éléments de même nature.
 COLLINES	Département du Bénin.
@@ -1921,7 +1912,6 @@ COMBLAIS	Habitant de Combles-en-Barrois, commune française située dans le dép
 COMEBACK	Remontée, revirement.
 COMITARD	Relatif aux comités, aux comitards.
 COMITIAL	Provoqué par l’épilepsie.
-COMMANDA	Nom de famille.
 COMMANDE	Mécanisme d’entraînement.
 COMMANDO	Attaque rapide et coordonnée.
 COMMERCE	Objet de transaction.
@@ -1989,7 +1979,6 @@ CONSCRIT	Inscrit.
 CONSERVE	Acte de préserver des aliments.
 CONSIGNE	Ordre, instruction que l’on donne à quelqu'un.
 CONSOEUR	Orthographe par contrainte typographique de consœur.
-CONSOLAT	Nom de famille.
 CONSOLER	Ajouter de l’eau-de-vie à son café.
 CONSONER	Former une consonance, s’harmoniser.
 CONSONNE	Désigne aussi les lettres de l’alphabet autres que les voyelles.
@@ -2026,7 +2015,7 @@ COQUELET	Jeune coq.
 COQUELLE	Récipient en terre.
 COQUEMAR	Pot de terre vernissée, ou de métal, pourvu d’une anse, et servant ordinairement à faire bouillir ou chauffer de l’eau, de la tisane ou d’autres liquides.
 COQUERET	Physalis.
-COQUERIE	Nom de famille.
+COQUERIE	Cuisine d'un navire.
 COQUERON	Nom de petites meules.
 COQUETEL	Réunion mondaine.
 COQUETER	Glousser avant de pondre, en parlant de la poule.
@@ -2096,7 +2085,7 @@ COUCHURE	Fixage du fil au bord du dessin dans la fabrication de la dentelle.
 COUDOYER	Être coude à coude.
 COUDRAIE	Lieu planté de coudriers, de noisetiers.
 COUDRAIS	Habitant de Coudres, commune française située dans le département de l’Eure.
-COUDRIER	Nom de famille.
+COUDRIER	Noisetier, arbuste produisant les noisettes.
 COUFIQUE	Écriture arabe à caractères anguleux et rigides.
 COUGOUAR	Autre nom du puma.
 COUILLON	Testicule, .
@@ -2135,7 +2124,7 @@ COURTIER	Intermédiaire qui agit sur les marchés financiers pour le compte de t
 COURTILS	Commune française du département de la Manche.
 COURTINE	Tas de fumier.
 COURTISE	Action par laquelle on courtise.
-COURTOIS	Nom de famille français.
+COURTOIS	Qui fait preuve de politesse, d'amabilité raffinée.
 COUSCOUS	Phalanger.
 COUSETTE	Jeune couturière.
 COUSEUSE	Couturière.
@@ -2146,7 +2135,7 @@ COUTURES	Commune française, située dans le département de la Gironde.
 COUVERTE	Couvercle.
 COUVEUSE	Poule qui couve.
 COUVRANT	Qui couvre.
-COUVREUR	Nom de famille
+COUVREUR	Artisan spécialisé dans la pose et la réparation des toitures.
 COUVRURE	Couverture d'un ouvrage
 COVALENT	Relatif à la covalence.
 COVENANT	Convention, accord, dans un contexte commercial anglo-saxon.
@@ -2313,12 +2302,11 @@ DAVIDIEN	Relatif à la secte américaine des davidiens.
 DEADLINE	Échéance, date limite, date butoir.
 DEALEUSE	Narcotrafiquante, vendeuse de drogue, de stupéfiants.
 DEBOUTER	Se mettre débout.
-DECHAUME	Nom de famille.
 DELEATUR	Signe par lequel on indique, dans la correction des épreuves, les lettres, les mots ou les lignes à retrancher.
 DELPHIEN	Dialecte grec parlé en Delphide.
 DELTISTE	Personne qui pratique le deltaplane.
 DEMANDER	Demander l’aumône.
-DEMARQUE	Nom de famille.
+DEMARQUE	Réduction du prix d'une marchandise ; action de démarquer.
 DEMEURER	Se trouver, rester ou être dans un certain état.
 DENDRITE	Arborisation, ramification.
 DENTAIRE	Qui a rapport aux dents.
@@ -2340,7 +2328,7 @@ DESSINER	Représenter, reproduire par le dessin.
 DESSOLER	Cultiver avec un nouvel assolement.
 DESTINER	Préparer, réserver.
 DESTRIER	Cheval de bataille au Moyen Âge.
-DETAILLE	Nom de famille, connu en particulier pour Édouard Detaille (1848-1912), peintre et illustrateur français.
+DETAILLE	Qui décrit avec précision, en entrant dans les particularités.
 DEVANCER	Surpasser, avoir l’avantage.
 DEVENTER	Ville des Pays-Bas située dans la province d’Overijssel.
 DEVINEUR	Personne qui devine, qui résout une devinette, une énigme.
@@ -2403,7 +2391,7 @@ DIRIMANT	Qui détruit un raisonnement.
 DISAMARE	Samare double : akènes ou fruits groupés par paire de certaines variétés de végétaux.
 DISCIPLE	Personne qui apprend d’un maître quelque science ou quelque art libéral.
 DISCOUNT	Réduction du prix de vente d’un produit ou d’une marchandise.
-DISCOURS	Nom de famille.
+DISCOURS	Allocution prononcée devant un auditoire ; développement oral ou écrit sur un sujet.
 DISCUTER	Converser.
 DISJOINT	Qui n’ont pas d’élément en commun.
 DISPARUE	Femme disparue.
@@ -2474,8 +2462,7 @@ DOUDOUNE	Sein. — Dans cet emploi, s’utilise principalement au pluriel.
 DOUGHNUT	Beignet.
 DOUILLER	Payer.
 DOUILLES	Cheveux.
-DOUILLET	Nom de famille.
-DOUILLEZ	Nom de famille.
+DOUILLET	Qui recherche l'aise et le confort ; qui est très sensible à la douleur.
 DOUILLON	Laine de qualité inférieure.
 DOUVELLE	Petite douve de tonneau.
 DOUZAINE	Douze ou à peu près douze.
@@ -2513,7 +2500,6 @@ DUCHESSE	Sorte de ruban.
 DUCROIRE	Qui s’engage solidairement avec ce type de clause.
 DULCIMER	Instrument à cordes frappées des pays anglophones dérivant de la doulcemelle française.
 DULCITOL	Polyol de formule brute , à saveur légèrement sucrée, produit par la réduction du galactose.
-DUPERIEZ	Nom de famille.
 DUPLEXER	Installer une liaison duplex entre deux endroits.
 DUPLIQUE	Réponse à des répliques.
 DURAILLE	Pierre, caillou.
@@ -2768,7 +2754,7 @@ ESBAUDIR	, égayer, réjouir.
 ESBIGNER	Voler, dérober.
 ESCABEAU	Siège de bois sans bras ni dossier.
 ESCADRON	Unité d’avions de combat.
-ESCALADA	Nom de famille.
+ESCALADA	Escalade rocheuse de difficulté élevée, en particulier dans les Pyrénées.
 ESCALADE	Action de grimper.
 ESCALIER	Voie piétonne constituée d’un ensemble de marches.
 ESCALOPE	Main.
@@ -2963,7 +2949,7 @@ FAUBOURG	Ensemble des habitants d'un de ces lieux.
 FAUCHAGE	Action de faucher.
 FAUCHARD	Sorte de serpe, de gouet, servant à couper les broussailles, il possédait deux cotés tranchants.
 FAUCHEUR	Ouvrier qui fauche.
-FAUCHEUX	Nom de famille.
+FAUCHEUX	Araignée aux pattes très longues, aussi appelée faucheur.
 FAUCILLE	Croissant de Lune.
 FAUFILER	Introduire, glisser subrepticement.
 FAUNESSE	Sorte de nymphe lascive dont l’aspect rappelle celui du faune.
@@ -2973,7 +2959,7 @@ FAUSTIEN	Relatif à , au mythe de Faust, dont le personnage signe un pacte avec 
 FAUTEUIL	Place à l’Académie française.
 FAUTRICE	Celle qui favorise, protège, une personne ou une chose.
 FAUVERIE	Caractère de ce qui a la couleur fauve.
-FAUVETTE	Nom de famille.
+FAUVETTE	Petit oiseau passereau au plumage brun-roux, connu pour son chant.
 FAUVISME	Mouvement pictural du début du siècle d’une jeune école française caractérisé par l’audace et la nouveauté de ses recherches chromatiques en de larges aplats de couleurs violentes, pures et vives. Les peintres se faisaient appeler « les Fauves ».
 FAUVISTE	Relatif au fauvisme.
 FAVORITE	Maitresse préférée d’un souverain.
@@ -3000,7 +2986,7 @@ FESTOYER	Recevoir à une fête, à un festin.
 FEUDISTE	Juriste spécialiste du droit féodal.
 FEUILLAT	Branche ou ramille, pourvue de ses feuilles, que l'on mettait à sécher en vue de servir de fourrage.
 FEUILLER	Faire une feuillure dans une pièce de bois.
-FEUILLET	Nom de famille.
+FEUILLET	Feuille de papier pliée ; page d'un livre.
 FEUTRAGE	Action par laquelle on feutre le poil ou la laine.
 FEUTRANT	Qui produit du feutre, qui feutre.
 FEUTRINE	Feutre de laine, souple et mince, généralement teint de couleurs vives, utilisé en confection, décoration.
@@ -3028,7 +3014,7 @@ FILEYEUR	Marin-pêcheur employé sur un fileyeur .
 FILIOQUE	Conflit théologique du siècle entre l’Église d’Orient et l’Église d’Occident suite à la modification du symbole de Nicée.
 FILIPINO	Langue parlée aux Philippines.
 FILLASSE	Femme de mauvaise vie.
-FILLETTE	Nom de famille.
+FILLETTE	Petite fille.
 FILLEULE	Ville ou village détruit par la guerre, qui reçoit un soutien moral et financier d'une ville, sa marraine.
 FILMABLE	Que l'on peut filmer.
 FILMEUSE	Machine à emballer d'un film plastique.
@@ -3174,7 +3160,7 @@ FOURNIER	Hameau de .
 FOURRAGE	Provisions pour les chevaux de l’armée.
 FOURREAU	Choses rappelant la forme du fourreau.
 FOURREUR	Celui qui vend des fourrures.
-FOURRIER	Nom de famille.
+FOURRIER	Sous-officier chargé du logement et de l'intendance dans l'armée.
 FOURRURE	Toison pubienne.
 FOUTAISE	Mensonge, fausseté.
 FOUTEUSE	Personne qui sème le désordre, le foutoir, la zizanie, qui fout la merde.
@@ -3188,7 +3174,7 @@ FRAGRANT	Odorant, d'une odeur pénétrante et suave.
 FRAICHIN	Forte odeur de poisson frais, d'humidité, de marécage, ressentie comme puante, désagréable.
 FRAISAGE	Type de travaux réalisés sur une fraiseuse.
 FRAISEUR	Ouvrier spécialisé dans le maniement de la machine-outil appelée fraise ou fraiseuse (donc dans le fraisage).
-FRAISIER	Nom de famille français.
+FRAISIER	Plante rampante cultivée pour ses fruits rouges, les fraises.
 FRAISOIR	Sorte de vilebrequin qui sert à fraiser.
 FRAISURE	Type de travaux réalisés sur une pièce mécanique avec une fraise sur une fraiseuse.
 FRANCHIR	Passer au-delà d’une limite.
@@ -3206,11 +3192,11 @@ FREINAGE	Action de freiner.
 FREINEUR	Homme chargé du freinage d’une machine, d’un véhicule.
 FRELATER	Dénaturer, corrompre.
 FRELUCHE	Chose frivole.
-FRENETTE	Nom de famille
+FRENETTE	Boisson fermentée légèrement alcoolisée faite à partir de feuilles de frêne.
 FRESSURE	Ensemble de plusieurs parties intérieures de quelques animaux comme le foie, le cœur, la rate et le poumon.
 FRETTAGE	Action de fretter, garnir une pièce d’une ou plusieurs frettes pour la renforcer.
 FREUDIEN	Partisan des théories de .
-FRIBOURG	Nom de famille.
+FRIBOURG	Ville et canton de Suisse romande.
 FRICATIF	Relatif à la frication.
 FRICOTER	Manger.
 FRICTION	Désaccord, accrochage.
@@ -3236,7 +3222,7 @@ FRITTAGE	Procédé de fabrication de pièces consistant à chauffer une poudre s
 FROIDEUR	État de ce qui manque de chaleur.
 FROIDURE	L’hiver.
 FROISSER	Chiffonner.
-FROMAGER	Nom de famille.
+FROMAGER	Artisan ou commerçant qui fabrique ou vend du fromage.
 FROMETON	Fromage.
 FRONDEUR	Opposant politique sous .
 FRONTAIL	Synonyme de fronteau.
@@ -3250,7 +3236,7 @@ FROTTOIR	Ce qui sert à frotter.
 FROUFROU	Ornement de tissu d’un vêtement.
 FRUCTOSE	Monosaccharide du groupe des cétoses et des hexoses présent dans les fruits et le miel; il constitue l’un des deux hexoses du saccharose.
 FRUITAGE	Toute sorte de fruits bons à manger.
-FRUITIER	Nom de famille.
+FRUITIER	Qui concerne les fruits ; arbre cultivé pour ses fruits.
 FRUSQUES	Vêtements.
 FRUSQUIN	Ce qu’un homme a d’argent et de nippes.
 FRUSTRER	Décevoir l’attente, l’espoir, l’espérance de quelqu’un.
@@ -3290,10 +3276,10 @@ GAFFEUSE	Celle qui commet une gaffe, des gaffes.
 GAGAOUZE	Membre du peuple des Gagaouzes.
 GAGNABLE	Qu’il est possible de gagner.
 GAGNANTE	Synonyme de simple gagnant.
-GAGNERIE	Nom de famille.
+GAGNERIE	Terre cultivée, champ labouré.
 GAGNEUSE	Celle qui gagne, qui gagne habituellement.
 GAIEMENT	D’une manière gaie.
-GAILLARD	Nom de famille français.
+GAILLARD	Vigoureux, robuste et jovial ; partie surélevée d'un navire.
 GAINERIE	Artisanat, commerce des gaines, des étuis.
 GALANTIN	Homme ridiculement galant auprès des femmes.
 GALAPIAT	Homme grossier et sans valeur.
@@ -3327,7 +3313,7 @@ GANGSTER	Malfaiteur de carrière, membre d’une organisation criminelle.
 GANSETTE	Petite ganse.
 GANTELET	Gant de protection porté par le fauconnier.
 GANTERIE	Industrie, commerce ou marchandises du gantier.
-GARAMOND	Nom de famille.
+GARAMOND	Caractère typographique classique créé au XVIe siècle.
 GARANCER	Teindre par la garance.
 GARANTIE	Dédommagement auquel on s’oblige.
 GARANTIR	Donner l’assurance ; assurer.
@@ -3340,7 +3326,7 @@ GARENNES	Ancien nom de la commune française Garennes-sur-Eure.
 GARGOTER	Faire de la mauvaise cuisine.
 GARNISON	Ville de garnison.
 GARNOTTE	Petit caillou.
-GARRIGUE	Nom de famille.
+GARRIGUE	Végétation arbustive basse des régions méditerranéennes calcaires.
 GARROTER	Poser un garrot.
 GARZETTE	Aigrette garzette.
 GASCONNE	Habitante de la Gascogne.
@@ -3370,7 +3356,7 @@ GEIGNANT	Qui a l’habitude de geindre.
 GEIGNARD	Qui se lamente.
 GELASIEN	Relatif à Saint-Gelais, commune française située dans le département des Deux-Sèvres.
 GEMMEUSE	Femme qui gemme, qui entaille les écorces de pins pour provoquer l’écoulement de la résine.
-GENDARME	Nom de famille.
+GENDARME	Militaire appartenant à la gendarmerie, chargé de missions de police.
 GENEVOIS	Habitant de la ville de Genève, en Suisse.
 GENNAKER	Voile d'avant de taille intermédiaire entre le génois et le spinnaker asymétrique.
 GENTIANE	Nom usuel des plantes du genre Gentiana.
@@ -3420,7 +3406,7 @@ GLISSEUR	Celui qui glisse sur la glace.
 GLISSOIR	Petit coulant mobile où passe une chaine.
 GLOBIQUE	Se dit d’une vis dont le diamètre est plus grand aux extrémités qu’au centre.
 GLOBULIN	Cellule sanguine dépourvue de noyau, formé dans la moelle osseuse, de formes très diverses et jouant un rôle très important dans la coagulation.
-GLORIEUX	Nom de famille.
+GLORIEUX	Qui procure de la gloire ; qui en tire une grande fierté.
 GLORIOLE	Vaine gloire que l’on tire de petites choses.
 GLOSSINE	Mouche tsé-tsé.
 GLOSSITE	Lésion inflammatoire de la langue.
@@ -3441,7 +3427,7 @@ GOBETAGE	Action de gobeter.
 GODAILLE	Soupe de poissons.
 GODICHON	Benêt, maladroit.
 GODILLER	Manœuvrer avec la godille.
-GODILLOT	Nom de famille.
+GODILLOT	Grosse chaussure militaire à semelle épaisse.
 GODIVEAU	Boulette de viande.
 GOETHITE	Espèce minérale, forme d’oxyhydroxyde de fer trivalent, polymorphe α du composé FeO(OH).
 GOGUENOT	Latrines.
@@ -3477,7 +3463,7 @@ GOUGOUNE	Peut aussi signifier une pantoufle entièrement tricotée, recouvrant l
 GOULAFRE	(Nord-Est de la France) Goinfre, glouton.
 GOULETTE	Petit canal de pierre ou de marbre, qui a une pente douce, et qui est interrompu de distance en distance par de petits bassins, pour le jeu des eaux.
 GOULOTTE	Petite rigole pour servir à l’écoulement des eaux.
-GOUPILLE	Nom de famille.
+GOUPILLE	Petite cheville ou broche métallique servant à bloquer une pièce.
 GOURANCE	Erreur.
 GOURGANE	Bajoue de porc fumé.
 GOURMADE	Coup de poing sur la figure.
@@ -3518,7 +3504,7 @@ GRATTOIR	Type d’outil préhistorique en silex taillé et retouché.
 GRATTURE	Glanure de foin.
 GRAVELER	Couvrir de gravier.
 GRAVELIN	Ce saule lui-même.
-GRAVELLE	Nom de famille.
+GRAVELLE	Calculs urinaires de petite taille ; maladie caractérisée par ces calculs.
 GRAVELOT	Échassier limicole de petite taille.
 GRAVEUSE	Machine servant à graver.
 GRAVITER	Suivre la loi de gravitation.
@@ -3544,7 +3530,6 @@ GRIFFANT	Qui griffe.
 GRIFFEUR	Qui griffe.
 GRIFFOIR	Appareil qui permet aux chats de limer leurs griffes.
 GRIFFURE	Égratignure faite par des griffes.
-GRIGNARD	Nom de famille.
 GRIGNONS	Résidus pâteux du pressurage, lors de l’extraction de l’huile d’olives.
 GRILLADE	Ces viandes et ces poissons grillés.
 GRILLAGE	Action de griller ou de torréfier.
@@ -3575,7 +3560,7 @@ GRONDEUR	Profond, sourd.
 GROSCHEN	Monnaie d’argent dans différents pays germaniques au Moyen Âge
 GROSSEUR	Enflure.
 GROSSIER	Malhonnête, incivil.
-GROUILLE	Nom de famille.
+GROUILLE	Se dit de ce qui grouille, fourmille, est en mouvement agité.
 GROUPAGE	Action consistant à réunir les envois de marchandises en provenance de plusieurs expéditeurs ou à l’adresse de plusieurs destinataires, et à organiser et faire exécuter l’acheminement du lot ainsi constitué par un transporteur.
 GROUPEUR	Dans les chemins de fer, celui qui groupe les petits colis.
 GRUGEOIR	Synonyme d’égrisoir.
@@ -3589,7 +3574,7 @@ GUEULOIR	Effet produit par le fait de déclamer un texte.
 GUIDANCE	Ligne de conduite ; gouvernance.
 GUIDOUNE	Femme légère, prostituée.
 GUIFETTE	Synonyme de guifette noire.
-GUIGNARD	Nom de famille.
+GUIGNARD	Pluvier guignard, oiseau migrateur à la poitrine rousse.
 GUIGNIER	Cerisier qui porte les guignes. Nom vulgaire du Prunus avium var. juliana (L.) Thuill..
 GUIMAUVE	Chanson sentimentale.
 GUINCHER	Danser.
@@ -3598,7 +3583,7 @@ GUINDANT	Hauteur d’un pavillon du côté où il est attaché.
 GUINDEAU	Treuil à axe horizontal utilisé sur les navires pour actionner l’ancre..
 GUINGOIS	Travers ; ce qui n’est ou ne va pas droit ; ce qui n’a pas la figure, la situation qu’il devrait avoir.
 GUISARME	Arme d’hast proche de la hallebarde, destinée aux gens de pied, du douzième au quinzième siècle.
-GUITOUNE	Nom de famille.
+GUITOUNE	Petite tente ou abri de fortune, en argot militaire.
 GUJARATI	Habitant du Gujarat, ou personne qui en est originaire.
 GUNITAGE	Projection de béton spécial sous haute-pression sur des parois pour former des couches homogènes. Cette technique appliquée sur un treillis métallique permet de créer des formes complexes.
 GURDWARA	Temple sikh, qui sert à la fois de lieu de culte et de réunion.
@@ -3703,7 +3688,7 @@ HIRUDINE	Petite protéine (65 acides aminés) contenue dans la salive des sangsu
 HISTOIRE	Science humaine qui étudie et interprète le passé.
 HISTRION	Mauvais comédien.
 HIVERNAL	Relatif à l’hiver.
-HIVERNAT	Nom de famille français.
+HIVERNAT	Cépage rouge cultivé en Orléanais.
 HIVERNER	Donner, à une terre, un dernier labour avant l’hiver.
 HOBEREAU	ou Petit gentilhomme campagnard.
 HOCHEPOT	Plat régional (Flandres), composé de viandes et de légumes divers cuits à l’étouffée.
@@ -4011,10 +3996,10 @@ JABOTEUR	Merle d’Afrique.
 JACASSER	Bavarder d’une manière fatigante.
 JACOBIEN	Déterminant d’une matrice jacobienne.
 JACOBINE	Habitante de Jacob-Bellecombette, commune française située dans le département de la Savoie.
-JACOBINS	Nom de famille.
+JACOBINS	Membres du Club des Jacobins, courant politique radical de la Révolution française.
 JACOBITE	Relatif aux jacobites et au jacobitisme.
-JACQUARD	Nom de famille.
-JACQUIER	Nom de famille.
+JACQUARD	Métier à tisser permettant la fabrication de tissus à motifs complexes.
+JACQUIER	Arbre tropical produisant le jacque, gros fruit comestible.
 JACTANCE	Bavardage.
 JACTEUSE	Femme qui jacte, bavarde.
 JALAPENO	Autre orthographe de jalapeño.
@@ -4048,7 +4033,7 @@ JEANNOIS	Relatif au .
 JECTISSE	pierres jectisses : pierres qui peuvent se poser à la main.
 JERRICAN	Bidon pour carburant automobile.
 JERSIAIS	Relatif à Jersey, à ses habitants, à sa culture.
-JEUNESSE	Nom de famille.
+JEUNESSE	Période de la vie entre l'enfance et l'âge adulte ; caractère de ce qui est jeune.
 JEUNETTE	Jeune femme.
 JEUNISME	Excès d’amour pour la jeunesse.
 JEUNISTE	Adepte du jeunisme, qui exalte les jeunes et la jeunesse.
@@ -4063,7 +4048,7 @@ JOIGNANT	Tout proche, sans qu’il y ait rien entre-deux.
 JOINTAGE	Opération consistant à donner leur forme définitive aux douelles d’un tonneau.
 JOINTURE	Joncture.
 JOLIESSE	Qualité de ce qui est joli.
-JOLIETTE	Nom de famille.
+JOLIETTE	Ville du Québec (Canada), chef-lieu de la région de Lanaudière.
 JOLIMENT	Beaucoup ; extrêmement.
 JONCHAIE	Lieu où poussent les joncs.
 JONCHETS	Jeu utilisant des jonchets, et consistant à retirer des bâtonnets entremêlés au moyen d’un crochet sans en heurter aucun autre.
@@ -4139,7 +4124,6 @@ LABOURER	Blesser moralement en profondeur.
 LABRADOR	Région du nord-est du Canada.
 LACANIEN	Le langage ou la pensée de .
 LACEMENT	Action de lacer.
-LACHEREZ	Nom de famille.
 LACONIEN	Habitant de la Laconie.
 LACRYMAL	Qui a rapport aux larmes.
 LACTAIRE	Qui a rapport au lait, à l'allaitement.
@@ -4334,7 +4318,6 @@ LONGOTTE	Calicot gros et lourd qui forme une sorte d’intermédiaire entre la t
 LONGRINE	Élément de fondation horizontal répartissant les charges de l’ouvrage sur ses points d’appui.
 LONGUEUR	Durée du temps.
 LOQUETER	Laver le sol à l’aide d’une loque.
-LOQUETTE	Nom de famille.
 LORGNEUR	Personne qui lorgne.
 LORIQUET	Nom normalisé donné à deux genres d'oiseaux de petite taille et généralement multicolores et de couleurs très vives, comprenant 15 espèces de la famille des psittaculidés (e.g. perruches, inséparables, etc.) et de la sous-famille des Loriinae, se distinguant des loris par leur queue allongée et conique, leurs rayures pectorales transversales ou longitudinales, et qui sont originaires d’Australasie (genres Psitteuteles et Trichoglossus).
 LOUANGER	Manifester son admiration avec excès.
@@ -4415,7 +4398,7 @@ MACULAGE	Action de maculer.
 MACULEUX	Caractérisé par la présence d’une ou plusieurs macule(s), en parlant d’une affection cutanée.
 MADICOLE	Qualifie cet habitat.
 MADRAGUE	Enceinte faite de câbles et de filets destinée à capturer des thons.
-MADRIGAL	Nom de famille.
+MADRIGAL	Courte pièce poétique ou musicale à caractère amoureux.
 MAESTOSO	Avec majesté, .
 MAESTRIA	Maîtrise dans un domaine artistique ou technique.
 MAFIEUSE	Personne liée à la mafia ; membre de la mafia.
@@ -4438,7 +4421,7 @@ MAILLEUR	Ouvrier qui fabrique des filets de pêche.
 MAILLURE	Ensemble des taches ou mouchetures qui se forment sur les plumes d’un oiseau.
 MAINMISE	Saisie.
 MAINTIEN	Action de maintenir.
-MAIRESSE	Nom de famille.
+MAIRESSE	Femme du maire ; femme exerçant la fonction de maire.
 MAITRANK	Vin aromatisé saisonnier servi en apéritif, spécialité de la région d’Arlon en Belgique, obtenu par macération de fleurs d’aspérule odorante dans du vin blanc de la Moselle luxembourgeoise.
 MAJORANT	Qui majore.
 MALAMUTE	Chien de traîneau originaire de l’Alaska qui possède un instinct de chasseur vivace et peut s'en prendre aux animaux des alentours comme les poules ou les canards.
@@ -4452,7 +4435,7 @@ MALEFAIM	Faim cruelle, dévorante.
 MALEMORT	Commune française du département de la Corrèze.
 MALFAIRE	Faire du mal.
 MALGACHE	Habitant ou personne originaire de Madagascar.
-MALHERBE	Nom de famille, porté notamment par le poète .
+MALHERBE	Plante adventice nuisible aux cultures.
 MALIENNE	Habitante ou originaire du Mali.
 MALINGRE	Qui est d’une complexion, d’une constitution physique faible et maladive.
 MALINOIS	Berger belge malinois.
@@ -4525,11 +4508,10 @@ MARBREUR	Celui qui marbre du papier, ou des tranches ou couvertures de livres (l
 MARBRIER	Relatif au travail du marbre.
 MARBRURE	Marques semblables aux veines du marbre.
 MARCAIRE	Relatif au marcaire
-MARCHAIS	Nom de famille.
-MARCHAND	Nom de famille.
+MARCHAND	Personne qui fait profession d'acheter et de vendre des marchandises.
 MARCHEUR	Viveur, qui fait la noce.
-MARCOTTE	Nom de famille.
-MARECHAL	Nom de famille.
+MARCOTTE	Branche ou tige couchée en terre pour prendre racine et former une nouvelle plante.
+MARECHAL	Officier général du plus haut grade dans l'armée française.
 MARENNES	Huître provenant du bassin de Marennes-Oléron, sur le littoral de la Charente-Maritime, qui bénéficie depuis 2009 d’une Indication Géographique Protégée.
 MAREYAGE	Activité du mareyeur orientée vers l’écoulement des produits frais de la pêche, incluant au besoin le stockage de la marée grâce au progrès réalisé par le froid industriel, après différentes opérations de vidage, lavage, mise en chambre froide.
 MAREYEUR	Celui qui vend du poisson de mer.
@@ -4546,7 +4528,7 @@ MARIACHI	Formation musicale originaire du Mexique.
 MARIEUSE	Femme arrangeant un mariage.
 MARINADE	Viande ou légume mariné & frit à la poêle.
 MARINAGE	Action de mariner.
-MARINIER	Nom de famille
+MARINIER	Personne qui travaille sur les bateaux de rivière ou de canal.
 MARISQUE	Tuméfaction fibreuse du pourtour de l’anus, reliquat d’une hémorroïde desséchée.
 MARITIME	Qui a rapport aux marins.
 MARMITER	Bombarder.
@@ -4564,18 +4546,18 @@ MAROQUIN	Objet en maroquin.
 MAROUFLE	Maraud, homme grossier.
 MARQUAGE	Fait de marquer, ou résultat de cette action.
 MARQUAIS	Habitant de Marques, commune française située dans le département de la Seine-Maritime.
-MARQUANT	Nom de famille.
+MARQUANT	Qui laisse une impression durable, notable, remarquable.
 MARQUEUR	Celui qui marque.
-MARQUISE	Nom de famille.
+MARQUISE	Femme d'un marquis ; auvent vitré au-dessus d'une porte.
 MARQUOIR	Tableau d’affichage des scores au polo.
 MARRAINE	Mère du parrain.
 MARRANTE	Celle qui est amusante, drôle.
 MARRONNE	Femme travaillant illégalement.
 MARSANNE	Commune française, située dans le département de la Drôme.
 MARSAULT	Synonyme de .
-MARSOUIN	Nom de famille.
+MARSOUIN	Petit cétacé des mers froides, proche du dauphin.
 MARTAGON	Lis à fleurs d'un rouge violacé, tachées de pourpre.
-MARTEAUX	Nom de famille.
+MARTEAUX	Pluriel de marteau, outil à frapper composé d'une tête et d'un manche.
 MARTELER	Donner des coups répétés.
 MARTELET	Petit marteau dont on se sert pour des ouvrages délicats.
 MARTINET	Hameau de .
@@ -4654,7 +4636,7 @@ MERISIER	Bois de cet arbre.
 MERLETTE	Merle femelle, merlesse.
 MERLUCHE	Morue, en parlant d’une personne.
 MERZLOTA	Couche du sol ne dégelant jamais.
-MESSAGER	Nom de famille.
+MESSAGER	Personne qui transmet des messages ou des nouvelles.
 MESSEOIR	Ne pas être convenable, ne pas être séant. Principalement utilisé dans une phrase négative.
 MESSIDOR	Dixième mois du calendrier républicain, qui commençait le 19 ou le 20 juin.
 MESURAGE	Action de mesurer.
@@ -4676,7 +4658,7 @@ MEXICAIN	Habitant de Mexico, capitale du Mexique..
 MIAULANT	Chat.
 MIAULEUR	Celui qui miaule comme un chat ; chat qui miaule.
 MICANITE	Ancien isolant électrique obtenu par la superposition de feuilles très fines de mica comprimées et assemblées à la gomme-laque
-MICHETON	Nom de famille
+MICHETON	Client d'une prostituée, en argot.
 MICROBUS	Petit autobus urbain.
 MIELLEUX	Qui tient du miel.
 MIELLURE	Miellat.
@@ -4727,7 +4709,7 @@ MISSILES	Cadeaux que les empereurs romains avaient l'habitude de jeter vers la f
 MISTELLE	Boisson alcoolisée sucrée obtenue par mélange de moût de raisin frais (jus de raisin non fermenté, aussi appelé vin doux) et d’alcool pour obtenir un assemblage titrant entre 15 et 22 degrés, et consommée habituellement en apéritif.
 MISTIGRI	Chat.
 MISTONNE	Gamine.
-MISTRESS	Madame (suivi d’un nom de famille).
+MISTRESS	Maîtresse de maison, en anglais ; femme de charge.
 MITIGEUR	Robinet permettant le dosage préalable de l’eau chaude et de l’eau froide à l’aide d’un seul levier pivotable.
 MITONNER	Cuire à feu doux, bouillir doucement.
 MOBILIER	Relatif aux biens meubles.
@@ -4750,7 +4732,7 @@ MOLETOIR	Instrument qui sert à polir les glaces.
 MOLLACHU	Mou, sans énergie.
 MOLLESSE	Manque de fermeté.
 MOLLETON	Mollets
-MOLLETTE	Nom de famille.
+MOLLETTE	Petite roue étoilée de l'éperon du cavalier.
 MOLLISOL	Couche du sol, au-dessus du pergélisol, qui gèle en hiver et dégèle en été et se trouve gorgée d’eau.
 MOLUSSON	Petite péniche sans moteur, naviguant autrefois sur les canaux du Centre de la France.
 MOMENTUM	Modèle de casque audio de la marque Sennheiser.
@@ -4827,7 +4809,7 @@ MOTIVANT	Qui motive.
 MOTOBALL	Sport collectif de ballon inspiré du football et joué sur des motos de 250 cm.
 MOTOTAXI	Deux-roues motorisé (motocyclette, scooter...), ou trois-roues carrossé dans certains pays, utilisé comme taxi.
 MOUCHAGE	Action de (se) moucher.
-MOUCHARD	Nom de famille
+MOUCHARD	Informateur de police, espion ; appareil de surveillance.
 MOUCHEUR	Qualifie un poisson qui se pêche à la mouche.
 MOUCHOIR	Grand bordage placé à la fesse du navire.
 MOUCHURE	Bout de la mèche quand on l'a mouché.
@@ -4948,7 +4930,7 @@ NIAISEUX	Personne niaiseuse.
 NICHEUSE	Spécialiste de niche.
 NICHROME	Alliage non magnétique de nickel et de chrome largement utilisé dans des éléments chauffants et aussi dans l’industrie des explosifs et des feux d’artifices ou encore en tant que système d’allumage fiable dans les allumettes électriques.
 NICKELER	Recouvrir d’une couche de nickel.
-NICODEME	Nom de famille.
+NICODEME	Homme naïf et crédule.
 NICOSIEN	Relatif à Nicosie, capitale de Chypre.
 NICOTINE	Sulfate de nicotine utilisé comme aphicide.
 NIDATION	Implantation de l’embryon des mammifères placentaires dans la muqueuse utérine.
@@ -4978,7 +4960,7 @@ NOCTURNE	Animal vivant la nuit.
 NODULEUX	Qui a des nodules.
 NOIRAUDE	Celle qui a le teint brun et les cheveux noirs.
 NOIRCEUR	Obscurité.
-NOISETTE	Nom de famille.
+NOISETTE	Petit fruit à coque dure du noisetier, à amande comestible.
 NOLITION	Acte de la volonté qui s’oppose, refus.
 NOMARQUE	Gouverneur d’un nome en Égypte.
 NOMBRANT	Qui porte un sens de numérotation pratique.
@@ -5233,7 +5215,7 @@ PAGNOTER	Se mettre au lit, se coucher.
 PAHOEHOE	Une des deux sortes de laves basaltiques de Hawaï, avec le aa.
 PAIEMENT	Action de payer.
 PAILLAGE	Désigne les matériaux utilisés pour effectuer les tâches décrites précédemment.
-PAILLARD	Nom de famille.
+PAILLARD	Qui est porté à la luxure, libertin.
 PAILLEUR	Chaumier.
 PAILLEUX	Fait avec de la paille.
 PAILLOTE	Impérate cylindrique.
@@ -5259,7 +5241,7 @@ PALLIDUM	Ensemble cérébral formé du globus pallidus (ou pallidum dorsal) et d
 PALMAIRE	Qui se rapporte à la paume de la main.
 PALMETTE	Ornement en forme de palme, employé en architecture, en peinture ou en broderie.
 PALMISTE	Habitant de La Palme, commune de l’Aude.
-PALOMINO	Nom de famille.
+PALOMINO	Cheval à la robe dorée et à la crinière claire.
 PALOTAGE	Action de creuser des tranchées pour planter du colza.
 PALOTEUR	Ouvrier qui travaille avec la bêche et la pelle.
 PALOURDE	Coquillage marin, bivalve, comestible.
@@ -5299,7 +5281,7 @@ PANTOUTE	Du tout.
 PAONNEAU	Jeune paon.
 PAPELARD	Papier.
 PAPETIER	Qui concerne la papeterie.
-PAPILLON	Nom de famille.
+PAPILLON	Insecte lépidoptère aux ailes colorées ; contravention.
 PAPIVORE	Qui consomme du papier.
 PAPOTAGE	Action de papoter, .
 PAPOUNET	Diminutif affectueux de papa.
@@ -5308,7 +5290,6 @@ PAPYBOOM	Augmentation importante du nombre de retraités, liée à un babyboom p
 PAPYBOUM	Augmentation importante du nombre de retraités, liée à un babyboum passé.
 PAQUEBOT	Grosse voiture.
 PAQUETER	Mettre en paquet.
-PAQUETTE	Nom de famille.
 PARABASE	Partie de la comédie ancienne où le poète s’adressait en son propre nom aux spectateurs.
 PARABOLE	Comparaison.
 PARACLET	Autre nom du Saint-Esprit. Toujours déterminé avec l’article défini le.
@@ -5478,7 +5459,7 @@ PERRUCHE	Femelle du perroquet, .
 PERRUQUE	Vieux, suranné.
 PERSICOT	Liqueur à base d’alcool de vin, d'amandes de noyaux de pêches, de sucre et de divers épices, parfois du persil. Parfois nommé eau de vie de Dantzig.
 PERSIQUE	Qui appartient à l’ancienne Perse.
-PERSONNE	Nom de famille.
+PERSONNE	Être humain considéré individuellement ; pronom indéfini.
 PERVERSE	Celle dont le comportement sexuel s’écarte de la normalité.
 PERVERTI	Qui s’est fait dénaturer, altérer, changer.
 PESSAIRE	Instrument dont on se sert dans le traitement de certaines affections de la matrice.
@@ -5556,14 +5537,13 @@ PINSCHER	Type de races de chiens originaires d’Allemagne, robustes et harmonie
 PIOCHAGE	Tirage dans une pioche.
 PIOCHANT	Qui pioche.
 PIOCHEUR	Travailleur opiniâtre.
-PIONNIER	Nom de famille.
+PIONNIER	Personne qui s'engage la première dans une voie nouvelle.
 PIOUPIOU	Poussin.
 PIPELINE	Canal de transmission de l’information.
 PIPERADE	Plat d'origine basque composé d’œufs battus en omelette et cuits avec des tomates et des poivrons.
 PIPERINE	Piperin.
 PIPETTER	Prélever avec une pipette.
 PIQUERAS	Commune d’Espagne, située dans la province de Guadalajara et la Communauté autonome de Castille-La Manche.
-PIQUEREZ	Nom de famille.
 PIQUERIE	Paroles caustiques, prononcées pour piquer au vif.
 PIQUETER	Parsemer de petits points, de petits trous, de petites taches.
 PIQUETTE	Défaite cuisante ; raclée.
@@ -5670,7 +5650,7 @@ POINTURE	Personne qui excelle dans une discipline.
 POISSARD	Personnage grossier et vulgaire.
 POISSEUX	Qui est gluant, collant comme de la poix.
 POISSONS	Canton français, situé dans le département de la Haute-Marne.
-POITEVIN	Nom de famille français.
+POITEVIN	Qui est originaire ou relatif au Poitou.
 POITRAIL	Partie avant du corps du cheval.
 POITRINE	Seins des femmes.
 POIVRADE	Fait de s’enivrer.
@@ -5710,7 +5690,7 @@ POMPETTE	En léger état d’ébriété.
 POMPEUSE	Celle qui pompe.
 POMPISTE	Ouvrier spécialisé qui manipule une pompe à béton.
 POMPONNE	Commune française, située dans le département de Seine-et-Marne.
-PONCELET	Nom de famille
+PONCELET	Unité de puissance ancienne équivalant à 100 kilogrammes-force mètre par seconde.
 PONCEUSE	Celle qui ponce .
 PONCTION	Prélèvement d’argent douloureux.
 PONCTUEL	Relatif à un point.
@@ -5727,11 +5707,10 @@ PORREAUX	ou Pluriel de porreau.
 PORRIDGE	Bouillie de flocons d’avoine ou de maïs.
 PORTABLE	Ordinateur portable.
 PORTAGER	Assurer le portage de son bateau sur une section où il ne peut pas naviguer.
-PORTALES	Nom de famille.
 PORTANCE	Composante de la force subie par un corps en mouvement dans un fluide qui s’exerce perpendiculairement à la direction du mouvement et contrairement à la gravité.
 PORTANTE	Pleine, à l’état de grossesse en parlant des animaux.
 PORTATIF	Que l’on peut aisément porter pour le déplacer.
-PORTERIE	Nom de famille.
+PORTERIE	Loge du portier dans un couvent ou un château.
 PORTEURS	Dakelh.
 PORTEUSE	Qualifie une femelle gestante.
 PORTIQUE	École des stoïciens.
@@ -5757,7 +5736,7 @@ POTINIER	Qui aime les potins, qui fait des commérages.
 POTIQUET	Pot à crayons.
 POTLATCH	Don cérémoniel.
 POTOMANE	Qui a un besoin maladif de boire constamment (de l’eau ou un autre liquide).
-POUBELLE	Nom de famille français, surtout connu grâce à Eugène Poubelle, qui a laissé son nom aux poubelles.
+POUBELLE	Récipient destiné à recevoir les ordures ménagères.
 POUCEUSE	Femme qui fait du pouce.
 POUDRAGE	Action de poudrer.
 POUDREUX	Qui est couvert de poudre, de poussière.
@@ -5889,7 +5868,7 @@ PUDDLEUR	Ouvrier employé au puddlage.
 PUDENDAL	Relatif au pudendum.
 PUDIBOND	Qui a une pudeur exagérée jusqu’au ridicule.
 PUISETTE	Récipient qui sert à puiser de l’eau.
-PUISSANT	Nom de famille.
+PUISSANT	Qui a une grande puissance, une grande force ou autorité.
 PULLULER	Se répandre rapidement ; abonder.
 PULPAIRE	Relatif à la pulpe.
 PULSANTE	Étoile pulsante.
@@ -5935,7 +5914,7 @@ QUATORZE	La guerre de 1914-1918.
 QUATRAIN	Quatre vers qui font partie d’un sonnet, d’une stance, etc.
 QUELQUES	(Avec un cardinal et et) Un petit nombre d’unités, d’objets, comme un cardinal.
 QUENELLE	Petit boudin d’une préparation (crème, mousse, purée, glace, etc.) formé en utilisant deux cuillères à soupe.
-QUENETTE	Nom de famille.
+QUENETTE	Fruit tropical sucré de l'arbre quenepa, originaire des Caraïbes.
 QUENOTTE	Dent d’un enfant.
 QUERELLE	Contestation, démêlé, dispute mêlée d’aigreur et d’animosité.
 QUESTEUR	Magistrat romain chargé, dans les armées ou dans les provinces, de l’administration des finances.
@@ -6250,7 +6229,7 @@ RETRAITE	Lieu de refuge.
 RETREMPE	Action de retremper de l’acier.
 REVALOIR	Rendre la pareille en bien ou en mal, et plus communément en mal.
 REVANCHE	Action de rendre un bien qu'on a reçu.
-REVELANT	Nom de famille.
+REVELANT	Qui révèle, qui met en lumière quelque chose de caché ou d'important.
 REVENANT	Qui revient.
 REVENDRE	Vendre de nouveau.
 REVERDIE	Nom donné, en Bretagne, aux grandes marées.
@@ -6278,7 +6257,6 @@ RIBOZYME	Petit ARN à propriété enzymatique, de type nucléase, transférase o
 RICANANT	Qui ricane.
 RICANEUR	Qui ricane.
 RICHARDE	ou Celle qui a beaucoup de fortune, qui est riche.
-RICHARDS	Nom de famille anglophone.
 RICHESSE	Grands biens.
 RICKSHAW	Véhicule tricycle à propulsion humaine ou mécanique, destiné au transport de personnes et de marchandises.
 RICOCHER	Faire ricochet.
@@ -6292,7 +6270,6 @@ RIGOLADE	Chose peu sérieuse.
 RIGOLAGE	Écoulement rapide, ruissellement.
 RIGOLARD	Qui rigole ou aime rigoler.
 RIGOLEUR	Qui se dérange de son travail pour aller boire ou s’amuser.
-RIGOLLOT	Nom de famille.
 RIGOLOTE	Celle qui est peu sérieuse, peu digne de confiance.
 RIMAILLE	Mauvaise poésie ; mauvais vers.
 RINCETTE	Coup de vin servi, soi-disant pour rincer le verre.
@@ -6313,10 +6290,10 @@ RIZICOLE	Qui a rapport à la culture du riz.
 ROADSTER	Type de moto dépouillée.
 ROANNAIS	Relatif à Roanne, commune de la Loire.
 ROBELAGE	Synonyme de .
-ROBERVAL	Nom de famille.
+ROBERVAL	Balance à plateaux suspendus par des bras horizontaux.
 ROBINEUX	Sans-abri alcoolique.
 ROBINIER	Genre d’arbre ou d’arbrisseau originaire d’Amérique du Nord, d’Asie ou d’Afrique septentrionale et largement répandue en Europe en particulier l’acacia blanc ou faux-acacia (Robinia pseudoacacia ).
-ROBINSON	Nom de famille anglais.
+ROBINSON	Personne vivant isolée à la manière de Robinson Crusoé.
 ROBURITE	Substance explosive.
 ROCAILLE	Fondant pour l'émail.
 ROCHASSE	Amas de roches.
@@ -6377,15 +6354,13 @@ ROUPETTE	voire Testicule. , roubignole, rouston, etc.
 ROUPILLE	Chose de peu de valeur, usée ou en mauvais état, guenille, rougne.
 ROUQUINE	Femme ou fille aux cheveux roux.
 ROUSSARD	Grès ferrugineux de couleur rose / rouille.
-ROUSSEAU	Nom de famille, surtout connu pour (1712-1778), écrivain d’expression française né à Genève, et le douanier Rousseau, un peintre.
+ROUSSEAU	De couleur rousse ; relatif au philosophe Jean-Jacques Rousseau.
 ROUSSEUR	Tache de rousseur.
-ROUSSIES	Nom de famille.
 ROUTARDE	Voyageuse, généralement solitaire et préférant les formules bon marché.
 ROUTEUSE	Ouvrière chargée de la conduite de ces machines.
 ROUVERIN	Qualifie un fer impur qui devient cassant, plein de gerçures lors du travail à une température qui lui est propre, comme on détermine la température du fer à sa couleur, se fer est aussi nommé fer de couleur et aussi fer métis.
 ROUVIEUX	Gale invétérée des chiens.
 ROUVRAIE	Lieu où croissent des rouvres.
-ROUVRAIS	Nom de famille français.
 ROYAUMER	Se prélasser.
 RUBANEUR	Qui donne à la filasse la forme de ruban.
 RUBANIER	Celui qui fabrique, qui vend du ruban.
@@ -6430,7 +6405,6 @@ SAGEMENT	D’une manière sage, prudente, avisée.
 SAGITTAL	Qui a la forme d’une flèche.
 SAGOUINE	Femme au comportement méprisable, salaude, saloparde.
 SAHARIEN	Relatif au Sahara et à ses habitants.
-SAHRAOUI	Nom de famille.
 SAIETTER	Nettoyer avec une saie (brosse d’orfèvre).
 SAIGNANT	Qui dégoutte de sang.
 SAIGNEUR	Celui qui saigne les porcs.
@@ -6596,7 +6570,7 @@ SEMBLANT	Insuffisance.
 SEMELAGE	Dessous de chaussure, semelle.
 SEMESTRE	Espace de six mois consécutifs.
 SEMONCER	Faire une semonce, une réprimande.
-SENECHAL	Nom de famille.
+SENECHAL	Au Moyen Âge, officier royal chargé de l'administration de la justice et des finances.
 SENESTRE	Gauche.
 SENONAIS	Relatif à Sens, ville française située dans le département de l’Yonne.
 SENORITA	Mademoiselle, demoiselle, en parlant d’une jeune fille d’un pays de langue espagnole.
@@ -6724,7 +6698,7 @@ SOLIDAGO	Synonyme de .
 SOLIFUGE	Arachnide de l’ordre des solifuges (Solifugae).
 SOLITUDE	Sentiment d'être seul ou abandonné.
 SOLIVAGE	Ensemble des solives dʼune construction, disposition de celles-ci.
-SOLIVEAU	Nom de famille.
+SOLIVEAU	Petite solive, pièce de charpente secondaire.
 SOLOGNOT	Sorte de laine de ces moutons.
 SOLSTICE	Jour comprenant cet évènement, dont le jour (par opposition à la nuit) est le plus long ou le plus court dans une année.
 SOLUTION	(Couramment) Moyen.
@@ -6764,7 +6738,7 @@ SOUDAINE	Nom court de Soudaine-Lavinadière, commune française de la Corrèze.
 SOUDEUSE	Machine à souder.
 SOUDOYER	Homme d’armes, mercenaire.
 SOUFFLER	Pousser, agiter l’air.
-SOUFFLET	Nom de famille.
+SOUFFLET	Instrument servant à souffler de l'air sur le feu ; gifle.
 SOUFFRIR	Endurer.
 SOUFISME	Conception mystique et ésotérique de l’islam, s’inscrivant ou non dans l’orthodoxie sunnite ou chiite.
 SOUFRAGE	Action de soufrer.
@@ -6787,20 +6761,19 @@ SOURCEUR	Spécialiste qui met en relation des centrales d'achat, des grossistes,
 SOURCIER	Celui qui passe pour habile à découvrir des sources, qui fait métier de les rechercher.
 SOURDINE	Sourdière.
 SOURIANT	Qui sourit.
-SOURISSE	Nom de famille.
 SOURNOIS	Personne sournoise.
 SOUSCRIT	Symbole typographique qui se place au-dessous des caractères.
 SOUTENIR	Appuyer ; réconforter.
 SOUTIERS	Commune française, située dans le département des Deux-Sèvres intégrée à la commune de Saint-Pardoux-Soutiers en janvier 2019.
 SOUTIRAT	En distillation, liquide lourd non évaporé.
 SOUTIRER	Se faire donner par adresse, obtenir par finesse ou par importunité.
-SOUVENIR	Nom de famille
+SOUVENIR	Image, impression que laisse dans la mémoire une chose passée.
 SOVKHOZE	Exploitation agricole appartenant à l’État, sous le régime communiste en URSS.
 SPACIEUX	Qui présente une grande superficie ; où l’on est au large.
 SPARAGES	Coups de boxe portés dans le vide.
 SPARDECK	Faux-pont.
 SPARKLET	Sparclette.
-SPEAKEUR	Celui qui est chargé d’annoncer au public le résultat des épreuves sportives.
+SPEAKEUR	, celui qui est chargé d’annoncer au public le résultat des épreuves sportives.
 SPECTRAL	Qui a l’apparence d’un fantôme.
 SPEEDWAY	Type de course motocycliste se pratiquant sur un circuit court de forme ovale et sur une piste en terre battue.
 SPERGULE	Herbacée caryophyllée.
@@ -6847,7 +6820,7 @@ STATISME	Rapport entre la marche à vide et à charge d'un moteurhttp://www.lint
 STATUQUO	État d'immobilisme.
 STELLAGE	Combinaison qui implique l’achat simultané d’un call et d’un put sur le même titre-support comportant le même prix d’exercice et la même date de valeur.
 STELLITE	Synonyme de wollastonite
-STEMMATE	Œil simple, distinct des yeux composés, généralement situé sur la tête de certains insectes.
+STEMMATE	Œil simple, distinct des yeux composés, généralement situé sur la tête (front et/ou vertex) de certains insectes tels que les cigales et les frelons. Il est relié à la plaque lobulaire du protocérébrum et participe à la perception de la lumière, de l’espace et du mouvement.
 STEPPAGE	Anomalie de la marche chez un sujet qui, atteint de paralysie des muscles releveurs du pied, doit lever fortement la jambe à chaque pas afin de ne pas heurter le sol avec la pointe du pied.
 STEPPEUR	cheval qui a de l’action.
 STERFPUT	Puisard ; siphon de cour ; coupe-air.
@@ -6905,7 +6878,7 @@ SUICIDER	Se tuer volontairement.
 SUIFFEUX	Ayant le caractère du suif.
 SUINTANT	Qui suinte.
 SUINTINE	Nom général donné aux matières grasses extraites du suint.
-SUIVANTE	Qui vient juste après.
+SUIVANTE	Femme ou jeune fille attachée au service d’une princesse.
 SUIVEUSE	Celle qui suit quelqu’un.
 SUIVISME	Ralliement opportuniste
 SUIVISTE	Qui relève du suivisme.
@@ -6923,11 +6896,11 @@ SUPERFLU	(Sens concret) Chose superflue.
 SUPERMAN	Justicier créé par Jerry Siegel et Joe Shuster pour Action Comics en 1938.
 SUPPLICE	Peine corporelle ordonnée par un tribunal.
 SUPPLIER	Implorer.
-SUPPORTS	Permet de soutenir.
+SUPPORTS	En termes de Blason, se dit des figures animales ou autres qui sont positionnées de part et d’autre de l’écu. Généralement ces figures vont par paires identiques (deux lions, deux colonnes, deux arbres…) mais il n’y a aucune restriction en la matière. Voir support quand il n’y a qu’une figure ou qu’on ne fait référence qu’à une en particulier. Dans le cas particulier des figures humaines (ou assimilées comme les anges), on parle plutôt de tenants.
 SUPPOSER	Faire admettre le faux pour vrai.
 SUPPURER	Rendre du pus.
 SUPPUTER	Estimer à quel chiffre monte une somme, évaluer une quantité d’après des données, par calcul.
-SUPREMUM	Plus petit majorant.
+SUPREMUM	Plus petit majorant. Pour un ensemble X de réels, le supremum, s’il existe, est le plus petit réel supérieur ou égal à tous les réels de X. L’existence d’un supremum pour les parties bornées supérieurement est toujours vérifiée, et découle de la définition mathématique des nombres réels.
 SURARMER	Armer excessivement.
 SURCHOIX	De qualité supérieure, surfine.
 SURCOTER	Coter plus que la valeur réelle d'un objet, d'une valeur ou d'une personne.
@@ -7025,16 +6998,16 @@ SYRIENNE	Habitante de la Syrie.
 SZLACHTA	Noblesse polonaise et/ou lituanienne.
 TABACOLE	Relatif au tabac, à sa culture.
 TABASSER	Se battre ; se bagarrer.
-TABLETTE	Petite planche.
+TABLETTE	Agenda.
 TABOURET	Charpente supportant la flèche d’une église.
 TACHETER	Marquer de petites taches, en parlant de taches artificielles.
-TACHISME	Style de peinture abstraite répandu en France dans les années 1940 et 1950
+TACHISME	Style de peinture abstraite répandu en France dans les années 1940 et 1950, considéré comme l'équivalent de l'abstraction expressionniste, caractérisé par des jets spontanés de peinture.
 TACHISTE	Relatif au tachisme.
 TACONEOS	Rythme de martèlement des talons dans le flamenco.
 TACTIQUE	Art de faire évoluer les bâtiments, les escadres au combat.
 TACTISME	Capacité de déplacement des animaux microscopiques, provoquée par des facteurs externes.
 TADELAKT	Stuc, enduit de chaux pouvant être utilisé aussi bien en intérieur qu’en extérieur.
-TAFFETAS	Etoffe de soie.
+TAFFETAS	Peur.
 TAGUEUSE	Femme ou fille qui tague.
 TAHITIEN	Habitant ou natif de Tahiti.
 TAILLADE	Entaille dans un mur.
@@ -7073,7 +7046,7 @@ TANISAGE	Action de taniser, ajout de tanin.
 TANKISTE	Soldat qui conduit ou est conduit dans un char ou tank en anglais.
 TANNERIE	Tannage, industrie du tannage.
 TANNEUSE	Celle dont le métier est de tanner des cuirs, de vendre des cuirs tannés.
-TANNIQUE	Relatif au tannin.
+TANNIQUE	Relatif au tan.
 TANNISER	Rendre plus riche en tanin.
 TANTINET	Très petite quantité.
 TANTOUZE	Sodomite, homosexuel passif.
@@ -7139,7 +7112,10 @@ TERMINUS	Point au delà duquel l’exploration d’une grotte ne peut pas contin
 TERNAIRE	Qui est composé de trois unités.
 TERRASSA	Commune d’Espagne, située dans la province de Barcelone et la Communauté autonome de Catalogne.
 TERRASSE	Balcon de grande dimension.
+TERRAZZO	Commune d’Italie de la province de Vérone dans la région de Vénétie.
+TERREAUX	Quartier de Lyon situé sur la Presqu’île entre Cordeliers et les pentes de la Croix-Rousse.
 TERRIBLE	Ce qui est terrible.
+TERRISSE	Hameau de .
 TERZETTO	Tercet.
 TESSELLE	Petit élément de forme régulière utilisé en marqueterie.
 TESTABLE	Que l’on peut tester, en particulier, pour assurer la véracité scientifique.
@@ -7206,14 +7182,14 @@ TOMBALES	Surnom donné par à des prostituées qui cherchent à séduire les hom
 TOMBELLE	Tombe formée d’une éminence de terre.
 TOMBEUSE	Séductrice.
 TOMMETTE	D’une couleur rouge brique clair.
-TONALITE	Hauteur d'un son.
+TONALITE	Roche plutonique ayant l’aspect du granite, composée principalement de plagioclase et de quartz, avec, en minéral relativement accessoire, la biotite. Relativement au granite, elle ne contient pas ou très peu de feldspath alcalin.
 TONDEUSE	Outil à tondre.
 TONGRIEN	Étage géologique du début de l’Oligocène (Tertiaire) formé de sables à nodules, et où de l’ambre est souvent présent.
 TONGROIS	Relatif à Tongres en Belgique.
 TONGUIEN	Relatif au tonguien, langue polynésienne.
 TONIFIER	Donner du tonus, de la tonicité, rendre plus vigoureux, plus ferme, plus alerte, plus actif.
 TONNELET	Vase à boire en usage au Moyen-Âge.
-TONNELLE	Nom de famille.
+TONNELLE	Abri de verdure en treillage, couvert de plantes grimpantes.
 TONNERRE	Commune française, située dans le département de l’Yonne.
 TONSILLE	Amygdale.
 TONSURER	Raser entièrement ou en partie le crâne de quelqu’un, pour des motifs religieux.
@@ -7233,7 +7209,7 @@ TORTILLE	Francisation de l'espagnol d'Amérique tortilla.
 TORTORER	Manger.
 TORTUEUX	Ce qui est fait avec des détours, qui montre une absence de franchise.
 TORTURER	Tourmenter.
-TOSCANES	Nom de famille.
+TOSCANES	Relatives à la Toscane, région d'Italie.
 TOUAILLE	Nappe qui recouvrait l’autel dans les églises.
 TOUCHANT	Concernant, sur le sujet de.
 TOUCHEUR	Celui qui touche.
@@ -7244,15 +7220,15 @@ TOULOUPE	Veste en peau de mouton retournée, portée par les paysans russes.
 TOUPINER	(régional) Cuisiner.
 TOURBEUX	Qui contient de la tourbe.
 TOURBIER	Valet de chiens.
-TOURELLE	Nom de famille.
+TOURELLE	Petite tour attenante à un édifice ; tourelle blindée d'un véhicule militaire.
 TOURISME	Action de voyager pour son plaisir.
-TOURISTA	Affection se manifestant par de la diarrhée, des maux de ventre ou encore des vomissements et de la fièvre.
+TOURISTA	Affection se manifestant par de la diarrhée, des maux de ventre ou encore des vomissements et de la fièvre, que l’on contracte dans un pays à faible niveau d’hygiène alimentaire ou hydrique par l’ingestion d’aliments ou boissons contaminés par des bactéries, virus ou autres parasites.
 TOURISTE	Dilettante.
 TOURMENT	Supplice, torture.
 TOURNAGE	Action de façonner des pièces mécaniques ou d’un autre matériau à l’aide d’un tour mécanique.
 TOURNAIS	Habitant du Tourne, commune française située dans le département de la Gironde.
 TOURNANT	Qui tourne.
-TOURNEUR	Nom de famille.
+TOURNEUR	Artisan qui façonne des pièces sur un tour.
 TOURNOIS	Habitant de Tournes, commune française située dans le département des Ardennes.
 TOURNURE	Tour.
 TOURTEAU	Sous entendu tourteau fromagé.
@@ -7280,6 +7256,7 @@ TRAITANT	Colon qui commerce avec la population indigène.
 TRAITEUR	Boutique où ces plats sont vendus.
 TRALUIRE	Devenir translucide, en parlant du raisin qui mûrit.
 TRAMEUSE	Ouvrière qui dispose les fils de trame.
+TRAMINER	Aucun cépage ne possède comme nom officiel traminer, toutefois ce nom est parfois selon les régions utilisé en tant que synonyme de gewurztraminer, de savagnin blanc ou de savagnin rose. Il existe un traminer gris (nom officiel) qui n'est pas autorisé en France.
 TRAMINOT	Conducteur de tramway.
 TRANCHER	Couper net ; séparer en coupant.
 TRANCHET	Objet tranchant.
@@ -7287,7 +7264,7 @@ TRANSEPT	Partie transversale d’une église qui coupe à angle droit la nef. El
 TRANTRAN	Petite allure lente et routinière des choses dans une affaire, dans la vie quotidienne.
 TRAPPEUR	Musicien jouant de la .
 TRAQUEUR	Celui qui a le trac.
-TRAVERSE	Nom de famille.
+TRAVERSE	Pièce posée en travers pour relier deux éléments ; chemin de traverse.
 TRAVESTI	Déguisé.
 TRAYEUSE	Celle qui trait .
 TREILLES	Commune française, située dans le département de l’Aude.
@@ -7303,11 +7280,10 @@ TRENTAIN	Score de trente.
 TRESSAGE	Action de tresser, résultat de cette action.
 TRESSEUR	Celui ou celle qui tresse.
 TREUILLE	Petite truble pour pêcher les crevettes.
-TREVISAN	Nom de famille.
 TRIACIDE	Qualifie une base qui, en combinaison, ne peut être neutralisée que par trois équivalents d’un acide.
 TRIANDRE	Qui a trois étamines.
 TRIANGLE	Constellation du ciel boréal, bordée par Andromède, les Poissons, le Bélier et Persée.
-TRIAZINE	Sorte de produit chimique utilisé notamment comme herbicide.
+TRIAZINE	Sorte de produit chimique qui possède dans sa molécule au moins un cycle formé de trois atomes de carbone et de trois atomes d’azote, disposés alternativement, et dont les dérivés sont utilisés notamment comme herbicides.
 TRIBANDE	Qualifie un téléphone portable qui peut fonctionner dans trois bandes de fréquence distinctes.
 TRIBUNAL	La justice divine.
 TRIBUNAT	Charge de tribun.
@@ -7325,7 +7301,7 @@ TRICOTIN	Pénis en érection.
 TRICOUNI	Clou à pointes, antidérapant, utilisé pour les chaussures d'alpinisme.
 TRICTRAC	Bruit que fait le fusil lorsqu’on l’arme.
 TRICYCLE	Cycle à trois roues.
-TRIDACNE	Espèce faisant partie d'un genre de grands mollusques bivalves marins.
+TRIDACNE	Espèce faisant partie d'un genre de grands mollusques bivalves marins, Tridacna, à coquille comportant 4 à 6 plis, au manteau coloré, vivant en symbiose avec des algues (zooxanthelles) sur le fond à faible profondeur en eaux chaudes de la région Indo-Pacifique sur des récifs de corail et servant de bénitiers dans les églises.
 TRIENNAL	Qui dure trois ans.
 TRIENNAT	Mandat de trois ans ; exercice d’une charge dont la durée est de trois ans ; durée de trois ans d’une magistrature.
 TRIERGOL	Propergol composé de trois ergols.
@@ -7370,7 +7346,7 @@ TROTTOIR	Bord d’une tarte, d’une pizza.
 TROUBADE	Fantassin.
 TROUBLER	Émouvoir.
 TROUBLES	Nom du conflit nord-irlandais qui a eu lieu entre les années 1960 et 2000.
-TROUFION	Simple soldat.
+TROUFION	Anus.
 TROUILLE	Forte peur.
 TROUPEAU	Troupe d’animaux sauvages
 TROUPIER	Soldat ; homme de troupe.
@@ -7420,7 +7396,7 @@ TURLUTTE	Fellation.
 TURNOVER	Taux de renouvellement du personnel.
 TURONIEN	Relatif au Turonien.
 TUTEURER	Munir d’un tuteur.
-TUTORIEL	Document permettant de comprendre le fonctionnement.
+TUTORIEL	De .
 TUTOYEUR	Celui qui tutoie aisément, fréquemment.
 TUVALAIS	Relatif aux Tuvalu.
 TUVALUAN	Habitant ou originaire des Tuvalu.
@@ -7481,7 +7457,7 @@ VACATION	Cessation des séances des gens de justice.
 VACCAIRE	Nom vernaculaire de la , plante messicole, aussi cultivée pour ses propriétés médicales.
 VACCINAL	Relatif au vaccin, à la vaccination.
 VACCINER	Inoculer la vaccine.
-VACHERIE	Nom de famille.
+VACHERIE	Étable à vaches ; méchanceté, parole blessante.
 VACHERIN	Gâteau composé d’une croûte de meringue, de fruits et de chantilly.
 VACHETTE	Colchique.
 VACILLER	Être incertain ou irrésolu ; varier.
@@ -7489,7 +7465,7 @@ VAGABOND	Qui erre çà et là.
 VAGINALE	Enveloppe séreuse qui entoure les testicules.
 VAGINITE	Inflammation de la muqueuse vaginale, caractérisée entre autres par des brûlures vaginales, des leucorrhées et des démangeaisons vaginales et vulvaires.
 VAIGRAGE	Action de le poser des vaigres.
-VAILLANT	Nom de famille.
+VAILLANT	Qui fait preuve de courage et de bravoure.
 VAISSEAU	Navire.
 VALAISAN	Habitant du Valais.
 VALDISME	Religion des vaudois.
@@ -7521,6 +7497,7 @@ VAPOTEUR	Utilisateur d’une cigarette électronique.
 VARAIGNE	Ouverture par laquelle l’eau de la mer entre dans le premier réservoir d’un marais salant.
 VARANGUE	Véranda des maisons coloniales.
 VARAPPER	Pratiquer la varappe.
+VARENNES	Terrain inculte bordant une rivière.
 VARHEURE	Unité d'énergie correspondant à la mise en jeu, pendant une heure, d'une puissance réactive de 1 var.
 VARIABLE	Étoile variable.
 VARIANCE	Mesure de la dispersion des échantillons autour de la moyenne.
@@ -7529,7 +7506,7 @@ VARIORUM	Imprimé avec des notes de plusieurs commentateurs.
 VARLOPER	Débiter.
 VARROASE	Maladie parasitaire des abeilles due au varroa.
 VASELINE	Substance blanche, onctueuse, extraite du pétrole, et qui constitue une sorte de pommade. C'est un hydrocarbure en .
-VASISTAS	Ouverture aménagée dans une fenêtre ou une porte.
+VASISTAS	Yeux.
 VAUDAIRE	Vent estival soufflant sur le lac Léman depuis le sud-est.
 VAUDOISE	Habitante du canton de Vaud en Suisse.
 VAUTRAIT	Équipage royal de chasse pour le sanglier.
@@ -7556,7 +7533,7 @@ VENTOUSE	Commune française, située dans le département de la Charente.
 VENTURON	Filet aussi appelé échiquier ou carrelet.
 VERBATIM	Fidèlement à ce qui a été dit.
 VERBIAGE	Abondance de paroles qui ne disent presque rien, qui contiennent peu de sens.
-VERDELET	Nom de famille.
+VERDELET	Légèrement acide, en parlant d'un vin encore jeune.
 VERDOYER	Être vert..
 VERGENCE	Tendance des humeurs vers une partie du corps.
 VERGETTE	Petite baguette, petite verge.
@@ -7565,7 +7542,6 @@ VERGOGNE	Retenue, pudeur, modestie, honte.
 VERJUTER	Assaisonner avec du verjus.
 VERMOULU	Délabré par le temps.
 VERMOUTH	Vin blanc dans lequel on a fait infuser des plantes amères, toniques et aromatiques.
-VERNISSE	Nom de famille.
 VERRANNE	Fibre de verre discontinue à brins d’un diamètre inférieur à dix micromètres et de longueur variable.
 VERRERIE	Art du verrier.
 VERRINES	Ancien nom de la commune française Verrines-sous-Celles.
@@ -7607,12 +7583,12 @@ VIELLEUR	Celui qui joue de la vielle.
 VIELLEUX	Celui qui joue de la vielle.
 VIENNOIS	Pain viennois.
 VIGILANT	Qui veille avec attention.
-VIGNERON	Nom de famille.
+VIGNERON	Personne qui cultive la vigne et produit du vin.
 VIGNETER	Orner de vignettes.
 VIGNETTE	Synonyme de imagette.
 VIGNOBLE	Pays de Bretagne, situé entre Nantes et la Vendée.
 VIGOUSSE	Force, énergie.
-VIGUERIE	Nom de famille.
+VIGUERIE	Circonscription administrative dirigée par un viguier, dans le Midi médiéval.
 VILEMENT	D’une manière vile.
 VINAIGRE	Liquide analogue obtenu avec d’autres produits que du vin.
 VINDICTE	Poursuite d’un crime.
@@ -7655,7 +7631,7 @@ VIVARAIS	Vin du Vivarais.
 VIVARIUM	Endroit où l’on garde et on élève des petits animaux vivants en tentant de reconstituer leur biotope.
 VIVEMENT	Sensiblement ; profondément.
 VIVERRIN	Relatif aux viverridés.
-VIVIFIER	Tonifier
+VIVIFIER	…
 VIVIPARE	Ovovivipare.
 VOANDZOU	Synonyme de pois de terre.
 VOCALISE	Exercice de vocalisation.
