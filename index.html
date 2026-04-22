@@ -727,7 +727,7 @@ function reportDefinition() {
   const word = state.word;
   const len = state.wordLen;
   const to = 's32.dumortier@gmail.com';
-  const subject = encodeURIComponent('Vérifier une définition');
+  const subject = encodeURIComponent('MOTDIX-Vérifier une définition');
   const body = encodeURIComponent(`Merci de vérifier la définition de ${word} dans les mots de ${len} lettres.`);
   window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 }
