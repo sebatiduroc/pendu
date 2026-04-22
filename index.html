@@ -671,7 +671,7 @@ function renderGame() {
   }
 
   document.getElementById('word-info').textContent =
-    `${state.word.length} lettres · ${[...state.revealed].length} trouvée(s)`;
+    `${state.word.length} lettres`;
 
   renderKeyboard();
 }
@@ -759,7 +759,7 @@ function guess(letter) {
 
   renderKeyboard();
   document.getElementById('word-info').textContent =
-    `${state.word.length} lettres · ${[...state.revealed].length} trouvée(s)`;
+    `${state.word.length} lettres`;
 }
 
 // ── END GAME ──
