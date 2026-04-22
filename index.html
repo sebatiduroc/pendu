@@ -289,6 +289,93 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 28px rgba(232,255,71,0.4);
   }
+  .action-btn.hint-btn {
+    border-color: var(--accent2);
+    color: var(--accent2);
+  }
+  .action-btn.hint-btn:hover {
+    background: rgba(255,107,138,0.08);
+    box-shadow: 0 4px 16px rgba(255,107,138,0.2);
+  }
+
+  /* ── CONFIRM MODAL ── */
+  .confirm-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    backdrop-filter: blur(4px);
+  }
+  .confirm-overlay.open { display: flex; }
+  .confirm-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-width: 340px;
+    width: 100%;
+    padding: 2rem;
+    animation: fadeIn 0.2s ease;
+    position: relative;
+    box-shadow: 0 0 60px rgba(255,107,138,0.15);
+    text-align: center;
+  }
+  .confirm-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent2), #ff9f47, var(--accent));
+    border-radius: 12px 12px 0 0;
+  }
+  .confirm-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+  .confirm-cost {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent2);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.6rem;
+  }
+  .confirm-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .confirm-ok {
+    background: linear-gradient(135deg, var(--accent2), #ff9f47);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    box-shadow: 0 4px 14px rgba(255,107,138,0.3);
+  }
+  .confirm-ok:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,107,138,0.45); }
+  .confirm-no {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .confirm-no:hover { border-color: var(--muted); color: var(--text); }
 
   /* ── KEYBOARD ── */
   .keyboard {
@@ -526,6 +613,7 @@
   <div class="word-info" id="word-info"></div>
 
   <div class="action-bar">
+    <button class="action-btn hint-btn" id="hint-btn-game" onclick="askHint()">💡 Définition (−5 pts)</button>
     <button class="action-btn def-btn" id="def-btn-game" onclick="showDefinition()">📖 Définition</button>
     <button class="action-btn next-btn" id="next-btn" onclick="pickNewWord()">Suivant →</button>
   </div>
@@ -552,6 +640,18 @@
     <div class="modal-def" id="modal-def"></div>
     <div class="modal-footer">
       <button class="modal-report-btn" onclick="reportDefinition()">⚠ Faux ?</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: CONFIRM HINT -->
+<div class="confirm-overlay" id="confirm-overlay">
+  <div class="confirm-box">
+    <div class="confirm-title">Voir la définition ?</div>
+    <div class="confirm-cost">Coût : 5 points</div>
+    <div class="confirm-actions">
+      <button class="confirm-no" onclick="closeConfirm()">NON</button>
+      <button class="confirm-ok" onclick="confirmHint()">OK</button>
     </div>
   </div>
 </div>
@@ -642,6 +742,32 @@ document.addEventListener('keydown', e => {
 function setActionBar(showDef, showNext) {
   document.getElementById('def-btn-game').classList.toggle('visible', showDef);
   document.getElementById('next-btn').classList.toggle('visible', showNext);
+  // Hint button: visible only during active game and score >= 6
+  updateHintBtn();
+}
+
+function updateHintBtn() {
+  const visible = state.gameActive && state.score >= 6;
+  document.getElementById('hint-btn-game').classList.toggle('visible', visible);
+}
+
+// ── HINT (definition for 5 pts) ──
+function askHint() {
+  document.getElementById('confirm-overlay').classList.add('open');
+}
+
+function closeConfirm() {
+  document.getElementById('confirm-overlay').classList.remove('open');
+}
+
+function confirmHint() {
+  closeConfirm();
+  state.score -= 5;
+  const scoreEl = document.getElementById('score-display');
+  scoreEl.textContent = state.score;
+  scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
+  updateHintBtn();
+  showDefinition();
 }
 
 // ── FONT SIZE: fill the line ──
@@ -794,6 +920,7 @@ function guess(letter) {
   renderKeyboard();
   document.getElementById('word-info').textContent =
     `${state.word.length} lettres`;
+  updateHintBtn();
 }
 
 // ── END GAME ──
