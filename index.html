@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -463,6 +462,29 @@
   }
   .modal-close:hover { color: var(--text); background: rgba(255,255,255,0.1); }
   .modal-no-def { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--muted); font-style: italic; }
+  .modal-footer {
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .modal-report-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    transition: all 0.15s;
+  }
+  .modal-report-btn:hover {
+    border-color: var(--accent2);
+    color: var(--accent2);
+    background: rgba(255,107,138,0.07);
+  }
 </style>
 </head>
 <body>
@@ -528,6 +550,9 @@
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div class="modal-word" id="modal-word"></div>
     <div class="modal-def" id="modal-def"></div>
+    <div class="modal-footer">
+      <button class="modal-report-btn" onclick="reportDefinition()">⚠ Faux ?</button>
+    </div>
   </div>
 </div>
 
@@ -593,6 +618,15 @@ function showDefinition() {
     ? `<span>${def}</span>`
     : `<span class="modal-no-def">Définition non disponible.</span>`;
   document.getElementById('modal-overlay').classList.add('open');
+}
+
+function reportDefinition() {
+  const word = state.word;
+  const len = state.wordLen;
+  const to = 's32.dumortier@gmail.com';
+  const subject = encodeURIComponent('Vérifier une définition');
+  const body = encodeURIComponent(`Merci de vérifier la définition de ${word} dans les mots de ${len} lettres.`);
+  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 }
 
 function closeModal(e) {
