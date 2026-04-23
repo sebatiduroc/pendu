@@ -945,6 +945,9 @@ function guess(letter) {
   if (!state.gameActive) return;
   if (state.guessed.has(letter)) return;
 
+  // After any real guess, the 50/50 grey state is cleared
+  state.fiftyFiftiedLetters = new Set();
+
   state.guessed.add(letter);
   const msg = document.getElementById('message-bar');
 
@@ -1090,8 +1093,9 @@ function confirmReveal() {
 
   const letter = candidates[Math.floor(Math.random() * candidates.length)];
 
-  // Reveal it (same as a correct guess but without "guessed" set, so keyboard stays available)
+  // Reveal it: add to both revealed and guessed so the key disappears from the keyboard
   state.revealed.add(letter);
+  state.guessed.add(letter);
   for (let i = 0; i < state.word.length; i++) {
     if (state.word[i] === letter) {
       const slot = document.getElementById(`slot-${i}`);
