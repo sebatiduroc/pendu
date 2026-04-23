@@ -640,7 +640,7 @@
   <div class="word-info" id="word-info"></div>
 
   <div class="action-bar">
-    <button class="action-btn hint-btn" id="hint-btn-game" onclick="askHint()">💡 Définition (−5 pts)</button>
+    <button class="action-btn hint-btn" id="hint-btn-game" onclick="askHint()">💡 Définition</button>
     <button class="action-btn fiftyfifty-btn" id="fiftyfifty-btn-game" onclick="askFiftyFifty()">⚡ 50/50</button>
     <button class="action-btn reveal-btn" id="reveal-btn-game" onclick="askReveal()">?x3</button>
     <button class="action-btn def-btn" id="def-btn-game" onclick="showDefinition()">📖 Définition</button>
@@ -965,12 +965,12 @@ function guess(letter) {
     const allRevealed = [...state.word].every(l => state.revealed.has(l));
     if (allRevealed) {
       state.gameActive = false;
-      state.score += 4;
+      state.score += 5;
       state.levelIdx += 1;
       document.getElementById('score-display').textContent = state.score;
       document.getElementById('level-display').textContent = state.levelIdx + 1;
       msg.className = 'message-bar win';
-      msg.textContent = `🎉 Bravo ! +4 points — Niveau ${state.levelIdx + 1}`;
+      msg.textContent = `🎉 Bravo ! +5 points — Niveau ${state.levelIdx + 1}`;
       setActionBar(true, true);
       return;
     }
