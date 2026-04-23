@@ -1118,6 +1118,7 @@ function confirmReveal() {
     document.getElementById('level-display').textContent = state.levelIdx + 1;
     msg.className = 'message-bar win';
     msg.textContent = `🎉 Bravo ! +4 points — Niveau ${state.levelIdx + 1}`;
+    renderKeyboard();
     setActionBar(true, true);
     return;
   }
@@ -1142,6 +1143,7 @@ function confirmReveal() {
     return;
   }
 
+  renderKeyboard();
   updateJokerBtns();
 }
 
