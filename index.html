@@ -195,7 +195,7 @@
   /* ── WORD DISPLAY ── */
   .word-display {
     display: flex;
-    gap: 0;
+    gap: 4px;
     margin-bottom: 0.75rem;
     justify-content: stretch;
     width: 100%;
@@ -677,7 +677,7 @@
 <div class="confirm-overlay" id="confirm-overlay">
   <div class="confirm-box">
     <div class="confirm-title">Voir la définition ?</div>
-    <div class="confirm-cost">Coût : 5 points</div>
+    <div class="confirm-cost" id="hint-confirm-cost">Coût : …</div>
     <div class="confirm-actions">
       <button class="confirm-no" onclick="closeConfirm()">NON</button>
       <button class="confirm-ok" onclick="confirmHint()">OK</button>
@@ -781,9 +781,10 @@ function showDefinition(hideWord = false) {
 function reportDefinition() {
   const word = state.word;
   const len = state.wordLen;
+  const def = getDefinition(word) || '(aucune définition)';
   const to = 's32.dumortier@gmail.com';
   const subject = encodeURIComponent('MOTDIX-Vérifier une définition');
-  const body = encodeURIComponent(`Merci de vérifier la définition de ${word} dans les mots de ${len} lettres.`);
+  const body = encodeURIComponent(`Merci de vérifier la définition de ${word} dans les mots de ${len} lettres.\n\nDéfinition actuelle :\n${def}`);
   window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 }
 
@@ -805,8 +806,9 @@ function setActionBar(showDef, showNext) {
 }
 
 function updateJokerBtns() {
-  // Hint (definition): visible if active and score >= 6
-  const hintVisible = state.gameActive && state.score >= 6;
+  // Hint (definition): visible if active and score >= hint cost
+  const hintCost = getHintCost();
+  const hintVisible = state.gameActive && state.score > hintCost && hintCost > 0;
   document.getElementById('hint-btn-game').classList.toggle('visible', hintVisible);
 
   // 50/50: visible if active and score >= 2
@@ -828,6 +830,9 @@ function updateHintBtn() { updateJokerBtns(); }
 
 // ── HINT (definition for 5 pts) ──
 function askHint() {
+  const cost = getHintCost();
+  document.getElementById('hint-confirm-cost').textContent =
+    `Coût : ${cost} point${cost > 1 ? 's' : ''}`;
   document.getElementById('confirm-overlay').classList.add('open');
 }
 
@@ -837,7 +842,8 @@ function closeConfirm() {
 
 function confirmHint() {
   closeConfirm();
-  state.score -= 5;
+  const cost = getHintCost();
+  state.score -= cost;
   const scoreEl = document.getElementById('score-display');
   scoreEl.textContent = state.score;
   scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
@@ -1005,6 +1011,12 @@ function guess(letter) {
   document.getElementById('word-info').textContent =
     `${state.word.length} lettres`;
   updateHintBtn();
+}
+
+// ── HINT COST ──
+function getHintCost() {
+  // Count all letter positions not yet revealed
+  return [...state.word].filter(l => !state.revealed.has(l)).length;
 }
 
 // ── HELPERS ──
