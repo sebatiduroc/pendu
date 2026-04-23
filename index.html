@@ -297,6 +297,33 @@
     background: rgba(255,107,138,0.08);
     box-shadow: 0 4px 16px rgba(255,107,138,0.2);
   }
+  .action-btn.fiftyfifty-btn {
+    border-color: #a78bfa;
+    color: #a78bfa;
+  }
+  .action-btn.fiftyfifty-btn:hover {
+    background: rgba(167,139,250,0.08);
+    box-shadow: 0 4px 16px rgba(167,139,250,0.2);
+  }
+  .action-btn.reveal-btn {
+    border-color: #fb923c;
+    color: #fb923c;
+  }
+  .action-btn.reveal-btn:hover {
+    background: rgba(251,146,60,0.08);
+    box-shadow: 0 4px 16px rgba(251,146,60,0.2);
+  }
+  /* grised out letters in keyboard for 50/50 */
+  .kb-key.greyed {
+    background: var(--used);
+    border-color: var(--used);
+    color: var(--used-text);
+    cursor: default;
+    opacity: 0.35;
+    transform: none !important;
+    box-shadow: none;
+    pointer-events: none;
+  }
 
   /* ── CONFIRM MODAL ── */
   .confirm-overlay {
@@ -614,6 +641,8 @@
 
   <div class="action-bar">
     <button class="action-btn hint-btn" id="hint-btn-game" onclick="askHint()">💡 Définition (−5 pts)</button>
+    <button class="action-btn fiftyfifty-btn" id="fiftyfifty-btn-game" onclick="askFiftyFifty()">⚡ 50/50</button>
+    <button class="action-btn reveal-btn" id="reveal-btn-game" onclick="askReveal()">?x3</button>
     <button class="action-btn def-btn" id="def-btn-game" onclick="showDefinition()">📖 Définition</button>
     <button class="action-btn next-btn" id="next-btn" onclick="pickNewWord()">Suivant →</button>
   </div>
@@ -656,6 +685,30 @@
   </div>
 </div>
 
+<!-- MODAL: CONFIRM 50/50 -->
+<div class="confirm-overlay" id="confirm-fiftyfifty-overlay">
+  <div class="confirm-box">
+    <div class="confirm-title">Joker 50/50</div>
+    <div class="confirm-cost">Grise toutes les lettres restantes sauf 2 — Coût : 1 point</div>
+    <div class="confirm-actions">
+      <button class="confirm-no" onclick="closeConfirmFiftyFifty()">NON</button>
+      <button class="confirm-ok" onclick="confirmFiftyFifty()">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: CONFIRM REVEAL -->
+<div class="confirm-overlay" id="confirm-reveal-overlay">
+  <div class="confirm-box">
+    <div class="confirm-title">Révéler une lettre unique</div>
+    <div class="confirm-cost">Révèle une lettre apparaissant une seule fois dans le mot — Coût : 2 points</div>
+    <div class="confirm-actions">
+      <button class="confirm-no" onclick="closeConfirmReveal()">NON</button>
+      <button class="confirm-ok" onclick="confirmReveal()">OK</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // ── STATE ──
 let dictionaries = {};
@@ -666,7 +719,9 @@ let state = {
   word: '',
   guessed: new Set(),
   revealed: new Set(),
-  gameActive: false
+  gameActive: false,
+  revealUsesLeft: 3,
+  fiftyFiftiedLetters: new Set()  // letters greyed out by 50/50
 };
 
 // ── SCREEN HELPERS ──
@@ -745,14 +800,31 @@ document.addEventListener('keydown', e => {
 function setActionBar(showDef, showNext) {
   document.getElementById('def-btn-game').classList.toggle('visible', showDef);
   document.getElementById('next-btn').classList.toggle('visible', showNext);
-  // Hint button: visible only during active game and score >= 6
-  updateHintBtn();
+  // Joker buttons: only during active game
+  updateJokerBtns();
 }
 
-function updateHintBtn() {
-  const visible = state.gameActive && state.score >= 6;
-  document.getElementById('hint-btn-game').classList.toggle('visible', visible);
+function updateJokerBtns() {
+  // Hint (definition): visible if active and score >= 6
+  const hintVisible = state.gameActive && state.score >= 6;
+  document.getElementById('hint-btn-game').classList.toggle('visible', hintVisible);
+
+  // 50/50: visible if active and score >= 2
+  const ffVisible = state.gameActive && state.score >= 2;
+  document.getElementById('fiftyfifty-btn-game').classList.toggle('visible', ffVisible);
+
+  // Reveal ?x3/?x2/?: visible if active, score >= 3, uses left > 0, and there's a unique letter remaining
+  const hasUnique = getUnrevealedUniqueLetters().length > 0;
+  const revealVisible = state.gameActive && state.score >= 3 && state.revealUsesLeft > 0 && hasUnique;
+  const revealBtn = document.getElementById('reveal-btn-game');
+  revealBtn.classList.toggle('visible', revealVisible);
+  if (state.revealUsesLeft === 3) revealBtn.textContent = '?x3';
+  else if (state.revealUsesLeft === 2) revealBtn.textContent = '?x2';
+  else if (state.revealUsesLeft === 1) revealBtn.textContent = '?';
 }
+
+// legacy alias
+function updateHintBtn() { updateJokerBtns(); }
 
 // ── HINT (definition for 5 pts) ──
 function askHint() {
@@ -791,6 +863,8 @@ async function startGame(len) {
   state.score = 10;
   state.levelIdx = 0;
   state.wordLen = len;
+  state.revealUsesLeft = 3;
+  state.fiftyFiftiedLetters = new Set();
   try {
     await loadDict(len);
     pickNewWord();
@@ -805,6 +879,7 @@ function pickNewWord() {
   state.word = words[Math.floor(Math.random() * words.length)];
   state.guessed = new Set();
   state.revealed = new Set();
+  state.fiftyFiftiedLetters = new Set();
   state.gameActive = true;
   setActionBar(false, false);
   renderGame();
@@ -852,6 +927,9 @@ function renderKeyboard() {
       btn.textContent = letter;
       if (state.guessed.has(letter)) {
         btn.classList.add(state.word.includes(letter) ? 'good' : 'bad');
+        btn.onclick = null;
+      } else if (state.fiftyFiftiedLetters.has(letter)) {
+        btn.classList.add('greyed');
         btn.onclick = null;
       } else {
         btn.onclick = () => guess(letter);
@@ -924,6 +1002,147 @@ function guess(letter) {
   document.getElementById('word-info').textContent =
     `${state.word.length} lettres`;
   updateHintBtn();
+}
+
+// ── HELPERS ──
+function getUnrevealedUniqueLetters() {
+  // Letters in the word appearing exactly once, not yet revealed/guessed
+  const freq = {};
+  for (const l of state.word) freq[l] = (freq[l] || 0) + 1;
+  return Object.keys(freq).filter(l => freq[l] === 1 && !state.revealed.has(l) && !state.guessed.has(l));
+}
+
+// ── JOKER 50/50 ──
+function askFiftyFifty() {
+  document.getElementById('confirm-fiftyfifty-overlay').classList.add('open');
+}
+function closeConfirmFiftyFifty() {
+  document.getElementById('confirm-fiftyfifty-overlay').classList.remove('open');
+}
+function confirmFiftyFifty() {
+  closeConfirmFiftyFifty();
+
+  // All keyboard letters not yet guessed
+  const allLetters = 'AEIOUY LNRST CDMPV BFGHQ JKWXZ'.replace(/ /g,'').split('');
+  const remaining = allLetters.filter(l => !state.guessed.has(l) && !state.fiftyFiftiedLetters.has(l));
+
+  // Pick 1 letter IN the word (not revealed/guessed)
+  const inWord = remaining.filter(l => state.word.includes(l));
+  // Pick 1 letter NOT in the word
+  const notInWord = remaining.filter(l => !state.word.includes(l));
+
+  if (inWord.length === 0 || notInWord.length === 0) {
+    // Nothing to grey — refund (edge case)
+    return;
+  }
+
+  const keepIn = inWord[Math.floor(Math.random() * inWord.length)];
+  const keepOut = notInWord[Math.floor(Math.random() * notInWord.length)];
+  const keep = new Set([keepIn, keepOut]);
+
+  // Grey everything remaining except the two kept ones
+  for (const l of remaining) {
+    if (!keep.has(l)) {
+      state.fiftyFiftiedLetters.add(l);
+    }
+  }
+
+  // Deduct score
+  state.score -= 1;
+  const scoreEl = document.getElementById('score-display');
+  scoreEl.textContent = state.score;
+  scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
+
+  renderKeyboard();
+  updateJokerBtns();
+
+  if (state.score <= 0) {
+    // Game over
+    state.gameActive = false;
+    for (let i = 0; i < state.word.length; i++) {
+      const slot = document.getElementById(`slot-${i}`);
+      if (slot) {
+        slot.textContent = state.word[i];
+        slot.classList.add(state.revealed.has(state.word[i]) ? 'revealed' : 'revealed-fail');
+      }
+    }
+    const msg = document.getElementById('message-bar');
+    msg.className = 'message-bar lose';
+    msg.textContent = `Le mot était : ${state.word}`;
+    setActionBar(true, false);
+    renderKeyboard();
+    setTimeout(endGame, 2200);
+  }
+}
+
+// ── JOKER REVEAL ?x3 ──
+function askReveal() {
+  document.getElementById('confirm-reveal-overlay').classList.add('open');
+}
+function closeConfirmReveal() {
+  document.getElementById('confirm-reveal-overlay').classList.remove('open');
+}
+function confirmReveal() {
+  closeConfirmReveal();
+
+  const candidates = getUnrevealedUniqueLetters();
+  if (candidates.length === 0) return;
+
+  const letter = candidates[Math.floor(Math.random() * candidates.length)];
+
+  // Reveal it (same as a correct guess but without "guessed" set, so keyboard stays available)
+  state.revealed.add(letter);
+  for (let i = 0; i < state.word.length; i++) {
+    if (state.word[i] === letter) {
+      const slot = document.getElementById(`slot-${i}`);
+      if (slot) { slot.textContent = letter; slot.classList.add('revealed'); }
+    }
+  }
+
+  // Deduct score
+  state.score -= 2;
+  const scoreEl = document.getElementById('score-display');
+  scoreEl.textContent = state.score;
+  scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
+
+  state.revealUsesLeft -= 1;
+
+  // Check win
+  const allRevealed = [...state.word].every(l => state.revealed.has(l));
+  const msg = document.getElementById('message-bar');
+  if (allRevealed) {
+    state.gameActive = false;
+    state.score += 4;
+    state.levelIdx += 1;
+    document.getElementById('score-display').textContent = state.score;
+    document.getElementById('level-display').textContent = state.levelIdx + 1;
+    msg.className = 'message-bar win';
+    msg.textContent = `🎉 Bravo ! +4 points — Niveau ${state.levelIdx + 1}`;
+    setActionBar(true, true);
+    return;
+  }
+
+  msg.className = 'message-bar info';
+  msg.textContent = `🔍 Lettre révélée : "${letter}" — −2 points`;
+
+  if (state.score <= 0) {
+    state.gameActive = false;
+    for (let i = 0; i < state.word.length; i++) {
+      const slot = document.getElementById(`slot-${i}`);
+      if (slot) {
+        slot.textContent = state.word[i];
+        slot.classList.add(state.revealed.has(state.word[i]) ? 'revealed' : 'revealed-fail');
+      }
+    }
+    msg.className = 'message-bar lose';
+    msg.textContent = `Le mot était : ${state.word}`;
+    setActionBar(true, false);
+    renderKeyboard();
+    setTimeout(endGame, 2200);
+    return;
+  }
+
+  updateJokerBtns();
 }
 
 // ── END GAME ──
