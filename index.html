@@ -735,7 +735,8 @@ let state = {
   gameActive: false,
   revealUsesLeft: 3,
   fiftyFiftiedLetters: new Set(),  // letters greyed out by 50/50
-  scratchActive: false
+  scratchActive: false,
+  revealedPositions: new Set()  // positions (index) révélées en début de partie
 };
 
 // ── SCREEN HELPERS ──
@@ -900,26 +901,27 @@ function pickNewWord() {
   state.word = words[Math.floor(Math.random() * words.length)];
   state.guessed = new Set();
   state.revealed = new Set();
+  state.revealedPositions = new Set();
   state.fiftyFiftiedLetters = new Set();
   state.scratchActive = false;
   state.gameActive = true;
 
-  // Pre-reveal letters based on word length
+  // Pre-reveal ONE specific position based on word length
   const w = state.word;
   const len = w.length;
   if (len === 7) {
-    // First and last letters
-    state.revealed.add(w[0]);
-    state.revealed.add(w[len - 1]);
+    // LA première case et LA dernière case (une seule occurrence chacune)
+    state.revealedPositions.add(0);
+    state.revealedPositions.add(len - 1);
   } else if (len === 8) {
-    // First letter only
-    state.revealed.add(w[0]);
+    // Uniquement LA première case
+    state.revealedPositions.add(0);
   } else if (len === 9) {
-    // A consonant that is not position 0 or 1
+    // Une consonne entre la 2ème et la 8ème position (pas index 0 ni 1)
     const vowels = new Set('AEIOUY');
     for (let i = 2; i < len; i++) {
       if (!vowels.has(w[i])) {
-        state.revealed.add(w[i]);
+        state.revealedPositions.add(i);
         break;
       }
     }
@@ -946,7 +948,7 @@ function renderGame() {
     const slot = document.createElement('div');
     slot.className = 'letter-slot';
     slot.id = `slot-${i}`;
-    if (state.revealed.has(state.word[i])) {
+    if (state.revealedPositions.has(i) || state.revealed.has(state.word[i])) {
       slot.textContent = state.word[i];
       slot.classList.add('revealed');
     }
