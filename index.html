@@ -97,11 +97,47 @@
     font-family: 'IBM Plex Mono', monospace;
     margin-bottom: 1.5rem;
   }
+  .length-buttons-wrap {
+    position: relative;
+    padding: 4px;
+    border-radius: 16px;
+    margin-bottom: 0;
+  }
+  .length-buttons-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #e8ff47, #47e8ff, #ff6b8a, #a78bfa, #e8ff47);
+    background-size: 300% 300%;
+    animation: borderFlow 3s linear infinite, borderGlow 2s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+  .length-buttons-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 13px;
+    background: var(--bg);
+    z-index: 1;
+  }
+  @keyframes borderFlow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes borderGlow {
+    0%   { opacity: 0.8; }
+    100% { opacity: 1; box-shadow: 0 0 28px rgba(232,255,71,0.3), 0 0 55px rgba(71,232,255,0.18), 0 0 70px rgba(255,107,138,0.12); }
+  }
   .length-buttons {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
   }
   .len-btn {
     width: 90px; height: 90px;
@@ -634,11 +670,13 @@
   <div class="title">MOTDIX</div>
   <div class="subtitle">Sébastien Dumortier</div>
   <div class="choice-label">Choisissez la longueur du mot</div>
-  <div class="length-buttons">
-    <button class="len-btn" data-len="7" data-label="lettres" onclick="startGame(7)"><span>7</span><span class="record-badge" id="record-7"></span></button>
-    <button class="len-btn" data-len="8" data-label="lettres" onclick="startGame(8)"><span>8</span><span class="record-badge" id="record-8"></span></button>
-    <button class="len-btn" data-len="9" data-label="lettres" onclick="startGame(9)"><span>9</span><span class="record-badge" id="record-9"></span></button>
-    <button class="len-btn" data-len="10" data-label="lettres" onclick="startGame(10)"><span>10</span><span class="record-badge" id="record-10"></span></button>
+  <div class="length-buttons-wrap">
+    <div class="length-buttons">
+      <button class="len-btn" data-len="7" data-label="lettres" onclick="startGame(7)"><span>7</span><span class="record-badge" id="record-7"></span></button>
+      <button class="len-btn" data-len="8" data-label="lettres" onclick="startGame(8)"><span>8</span><span class="record-badge" id="record-8"></span></button>
+      <button class="len-btn" data-len="9" data-label="lettres" onclick="startGame(9)"><span>9</span><span class="record-badge" id="record-9"></span></button>
+      <button class="len-btn" data-len="10" data-label="lettres" onclick="startGame(10)"><span>10</span><span class="record-badge" id="record-10"></span></button>
+    </div>
   </div>
 </div>
 
@@ -1052,8 +1090,8 @@ function guess(letter) {
     if (allRevealed) {
       state.gameActive = false;
       state.score += 4;
-      state.levelIdx += 1;
       saveRecord(state.wordLen, state.levelIdx + 1);
+      state.levelIdx += 1;
       document.getElementById('score-display').textContent = state.score;
       document.getElementById('level-display').textContent = state.levelIdx + 1;
       msg.className = 'message-bar win';
@@ -1265,8 +1303,8 @@ function confirmReveal() {
     if (allRevealed) {
       state.gameActive = false;
       state.score += 4;
-      state.levelIdx += 1;
       saveRecord(state.wordLen, state.levelIdx + 1);
+      state.levelIdx += 1;
       document.getElementById('score-display').textContent = state.score;
       document.getElementById('level-display').textContent = state.levelIdx + 1;
       msg.className = 'message-bar win';
@@ -1346,8 +1384,8 @@ function confirmReveal() {
       if (allRevealed2) {
         state.gameActive = false;
         state.score += 4;
-        state.levelIdx += 1;
         saveRecord(state.wordLen, state.levelIdx + 1);
+        state.levelIdx += 1;
         document.getElementById('score-display').textContent = state.score;
         document.getElementById('level-display').textContent = state.levelIdx + 1;
         msg.className = 'message-bar win';
