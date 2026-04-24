@@ -325,6 +325,19 @@
     pointer-events: none;
   }
 
+  /* ── SCRATCH MODE ── */
+  .word-display.scratch-mode {
+    cursor: crosshair;
+    user-select: none;
+  }
+  .letter-slot.scratch-overlay-active {
+    border-color: rgba(232,255,71,0.2);
+    background: rgba(232,255,71,0.03);
+  }
+  .letter-slot.scratch-target {
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+
   /* ── CONFIRM MODAL ── */
   .confirm-overlay {
     display: none;
@@ -721,7 +734,8 @@ let state = {
   revealed: new Set(),
   gameActive: false,
   revealUsesLeft: 3,
-  fiftyFiftiedLetters: new Set()  // letters greyed out by 50/50
+  fiftyFiftiedLetters: new Set(),  // letters greyed out by 50/50
+  scratchActive: false
 };
 
 // ── SCREEN HELPERS ──
@@ -871,6 +885,7 @@ async function startGame(len) {
   state.wordLen = len;
   state.revealUsesLeft = 3;
   state.fiftyFiftiedLetters = new Set();
+  state.scratchActive = false;
   try {
     await loadDict(len);
     pickNewWord();
@@ -886,7 +901,31 @@ function pickNewWord() {
   state.guessed = new Set();
   state.revealed = new Set();
   state.fiftyFiftiedLetters = new Set();
+  state.scratchActive = false;
   state.gameActive = true;
+
+  // Pre-reveal letters based on word length
+  const w = state.word;
+  const len = w.length;
+  if (len === 7) {
+    // First and last letters
+    state.revealed.add(w[0]);
+    state.revealed.add(w[len - 1]);
+  } else if (len === 8) {
+    // First letter only
+    state.revealed.add(w[0]);
+  } else if (len === 9) {
+    // A consonant that is not position 0 or 1
+    const vowels = new Set('AEIOUY');
+    for (let i = 2; i < len; i++) {
+      if (!vowels.has(w[i])) {
+        state.revealed.add(w[i]);
+        break;
+      }
+    }
+  }
+  // len === 10: no pre-reveal
+
   setActionBar(false, false);
   renderGame();
   showScreen('screen-game');
@@ -931,7 +970,10 @@ function renderKeyboard() {
       const btn = document.createElement('button');
       btn.className = 'kb-key';
       btn.textContent = letter;
-      if (state.guessed.has(letter)) {
+      if (state.scratchActive) {
+        btn.classList.add('greyed');
+        btn.onclick = null;
+      } else if (state.guessed.has(letter)) {
         btn.classList.add(state.word.includes(letter) ? 'good' : 'bad');
         btn.onclick = null;
       } else if (state.fiftyFiftiedLetters.has(letter)) {
@@ -971,12 +1013,12 @@ function guess(letter) {
     const allRevealed = [...state.word].every(l => state.revealed.has(l));
     if (allRevealed) {
       state.gameActive = false;
-      state.score += 5;
+      state.score += 4;
       state.levelIdx += 1;
       document.getElementById('score-display').textContent = state.score;
       document.getElementById('level-display').textContent = state.levelIdx + 1;
       msg.className = 'message-bar win';
-      msg.textContent = `🎉 Bravo ! +5 points — Niveau ${state.levelIdx + 1}`;
+      msg.textContent = `🎉 Bravo ! +4 points — Niveau ${state.levelIdx + 1}`;
       setActionBar(true, true);
       return;
     }
@@ -1105,62 +1147,207 @@ function confirmReveal() {
 
   const letter = candidates[Math.floor(Math.random() * candidates.length)];
 
-  // Reveal it: add to both revealed and guessed so the key disappears from the keyboard
-  state.revealed.add(letter);
-  state.guessed.add(letter);
-  for (let i = 0; i < state.word.length; i++) {
-    if (state.word[i] === letter) {
-      const slot = document.getElementById(`slot-${i}`);
-      if (slot) { slot.textContent = letter; slot.classList.add('revealed'); }
-    }
-  }
-
-  // Deduct score
+  // Deduct score immediately
   state.score -= 2;
   const scoreEl = document.getElementById('score-display');
   scoreEl.textContent = state.score;
   scoreEl.className = 'score-val' + (state.score <= 3 ? ' danger' : '');
-
   state.revealUsesLeft -= 1;
 
-  // Check win
-  const allRevealed = [...state.word].every(l => state.revealed.has(l));
-  const msg = document.getElementById('message-bar');
-  if (allRevealed) {
-    state.gameActive = false;
-    state.score += 4;
-    state.levelIdx += 1;
-    document.getElementById('score-display').textContent = state.score;
-    document.getElementById('level-display').textContent = state.levelIdx + 1;
-    msg.className = 'message-bar win';
-    msg.textContent = `🎉 Bravo ! +4 points — Niveau ${state.levelIdx + 1}`;
-    renderKeyboard();
-    setActionBar(true, true);
-    return;
-  }
-
-  msg.className = 'message-bar info';
-  msg.textContent = `🔍 Lettre révélée : "${letter}" — −2 points`;
-
-  if (state.score <= 0) {
-    state.gameActive = false;
-    for (let i = 0; i < state.word.length; i++) {
-      const slot = document.getElementById(`slot-${i}`);
-      if (slot) {
-        slot.textContent = state.word[i];
-        slot.classList.add(state.revealed.has(state.word[i]) ? 'revealed' : 'revealed-fail');
-      }
-    }
-    msg.className = 'message-bar lose';
-    msg.textContent = `Le mot était : ${state.word}`;
-    setActionBar(true, false);
-    renderKeyboard();
-    setTimeout(endGame, 2200);
-    return;
-  }
-
+  // Grey out the entire keyboard during scratch phase
+  state.scratchActive = true;
   renderKeyboard();
   updateJokerBtns();
+
+  // Show scratch instruction
+  const msg = document.getElementById('message-bar');
+  msg.className = 'message-bar info';
+  msg.textContent = '🔥 Frottez énergiquement le mot mystère pendant 8 secondes !';
+
+  // Mark word display with scratch overlay
+  const wordEl = document.getElementById('word-display');
+  wordEl.classList.add('scratch-mode');
+
+  // Find positions of the letter to reveal
+  const positions = [];
+  for (let i = 0; i < state.word.length; i++) {
+    if (state.word[i] === letter) positions.push(i);
+  }
+
+  // Add scratch overlays to all slots
+  const slots = wordEl.querySelectorAll('.letter-slot');
+  slots.forEach((slot, i) => {
+    slot.classList.add('scratch-overlay-active');
+    if (positions.includes(i)) {
+      slot.dataset.revealLetter = letter;
+      slot.classList.add('scratch-target');
+      slot.textContent = letter;
+      slot.style.opacity = '0.05';
+      slot.style.color = 'rgba(232,255,71,0.05)';
+    }
+  });
+
+  // Track scratch interaction — le décompte n'avance QUE pendant que le joueur frotte
+  const SCRATCH_DURATION = 8000;
+  let scratchedMs = 0;       // millisecondes accumulées en frottant
+  let scratchingStart = null; // timestamp du début du frottage en cours
+
+  function finishReveal() {
+    wordEl.removeEventListener('mousemove', onScratch);
+    wordEl.removeEventListener('touchmove', onScratch, { passive: false });
+    wordEl.removeEventListener('mouseleave', onScratchStop);
+    wordEl.removeEventListener('touchend', onScratchStop);
+    state.scratchActive = false;
+
+    // Fully reveal
+    state.revealed.add(letter);
+    state.guessed.add(letter);
+
+    positions.forEach(i => {
+      const slot = document.getElementById(`slot-${i}`);
+      if (slot) {
+        slot.textContent = letter;
+        slot.style.opacity = '1';
+        slot.style.color = '';
+        slot.classList.remove('scratch-overlay-active', 'scratch-target');
+        slot.classList.add('revealed');
+        delete slot.dataset.revealLetter;
+      }
+    });
+
+    slots.forEach(s => s.classList.remove('scratch-overlay-active'));
+    wordEl.classList.remove('scratch-mode');
+
+    renderKeyboard();
+    updateJokerBtns();
+
+    // Check win
+    const allRevealed = [...state.word].every(l => state.revealed.has(l));
+    if (allRevealed) {
+      state.gameActive = false;
+      state.score += 4;
+      state.levelIdx += 1;
+      document.getElementById('score-display').textContent = state.score;
+      document.getElementById('level-display').textContent = state.levelIdx + 1;
+      msg.className = 'message-bar win';
+      msg.textContent = '🎉 Bravo ! +4 points — Niveau ' + (state.levelIdx + 1);
+      renderKeyboard();
+      setActionBar(true, true);
+      return;
+    }
+
+    msg.className = 'message-bar info';
+    msg.textContent = '🔍 Lettre révélée : "' + letter + '" — −2 points';
+
+    if (state.score <= 0) {
+      state.gameActive = false;
+      for (let i = 0; i < state.word.length; i++) {
+        const slot = document.getElementById('slot-' + i);
+        if (slot) {
+          slot.textContent = state.word[i];
+          slot.classList.add(state.revealed.has(state.word[i]) ? 'revealed' : 'revealed-fail');
+        }
+      }
+      msg.className = 'message-bar lose';
+      msg.textContent = 'Le mot était : ' + state.word;
+      setActionBar(true, false);
+      renderKeyboard();
+      setTimeout(endGame, 2200);
+    }
+  }
+
+  function onScratch(e) {
+    if (!state.scratchActive) return;
+    e.preventDefault();
+
+    const now = Date.now();
+    if (scratchingStart === null) scratchingStart = now;
+
+    // Accumulate time only while actively scratching
+    const sessionMs = now - scratchingStart;
+    const totalMs = scratchedMs + sessionMs;
+    const progress = Math.min(totalMs / SCRATCH_DURATION, 1);
+
+    positions.forEach(i => {
+      const slot = document.getElementById('slot-' + i);
+      if (slot) {
+        const op = Math.min(0.05 + progress * 0.85, 0.9);
+        slot.style.opacity = op.toFixed(2);
+        slot.style.color = 'rgba(232,255,71,' + op.toFixed(2) + ')';
+      }
+    });
+
+    const remaining = Math.ceil((SCRATCH_DURATION - totalMs) / 1000);
+    msg.textContent = '🔥 Continuez à frotter… ' + Math.max(remaining, 0) + 's';
+
+    if (totalMs >= SCRATCH_DURATION) {
+      scratchedMs = SCRATCH_DURATION;
+      scratchingStart = null;
+      finishReveal();
+      // Fully reveal
+      state.revealed.add(letter);
+      state.guessed.add(letter);
+      positions.forEach(i => {
+        const slot = document.getElementById('slot-' + i);
+        if (slot) {
+          slot.textContent = letter;
+          slot.style.opacity = '1';
+          slot.style.color = '';
+          slot.classList.remove('scratch-overlay-active', 'scratch-target');
+          slot.classList.add('revealed');
+          delete slot.dataset.revealLetter;
+        }
+      });
+      slots.forEach(s => s.classList.remove('scratch-overlay-active'));
+      wordEl.classList.remove('scratch-mode');
+      renderKeyboard();
+      updateJokerBtns();
+      const allRevealed2 = [...state.word].every(l => state.revealed.has(l));
+      if (allRevealed2) {
+        state.gameActive = false;
+        state.score += 4;
+        state.levelIdx += 1;
+        document.getElementById('score-display').textContent = state.score;
+        document.getElementById('level-display').textContent = state.levelIdx + 1;
+        msg.className = 'message-bar win';
+        msg.textContent = '🎉 Bravo ! +4 points — Niveau ' + (state.levelIdx + 1);
+        renderKeyboard();
+        setActionBar(true, true);
+        return;
+      }
+      msg.className = 'message-bar info';
+      msg.textContent = '🔍 Lettre révélée : "' + letter + '" — −2 points';
+      if (state.score <= 0) {
+        state.gameActive = false;
+        for (let i = 0; i < state.word.length; i++) {
+          const slot = document.getElementById('slot-' + i);
+          if (slot) {
+            slot.textContent = state.word[i];
+            slot.classList.add(state.revealed.has(state.word[i]) ? 'revealed' : 'revealed-fail');
+          }
+        }
+        msg.className = 'message-bar lose';
+        msg.textContent = 'Le mot était : ' + state.word;
+        setActionBar(true, false);
+        renderKeyboard();
+        setTimeout(endGame, 2200);
+      }
+    }
+  }
+
+  function onScratchStop() {
+    if (scratchingStart !== null) {
+      scratchedMs += Date.now() - scratchingStart;
+      scratchingStart = null;
+      const remaining = Math.ceil((SCRATCH_DURATION - scratchedMs) / 1000);
+      msg.textContent = '🔥 Frottez le mot pour révéler la lettre… encore ' + Math.max(remaining, 0) + 's';
+    }
+  }
+
+  wordEl.addEventListener('mousemove', onScratch);
+  wordEl.addEventListener('touchmove', onScratch, { passive: false });
+  wordEl.addEventListener('mouseleave', onScratchStop);
+  wordEl.addEventListener('touchend', onScratchStop);
 }
 
 // ── END GAME ──
