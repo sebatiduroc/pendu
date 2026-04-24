@@ -1053,6 +1053,7 @@ function guess(letter) {
       state.gameActive = false;
       state.score += 4;
       state.levelIdx += 1;
+      saveRecord(state.wordLen, state.levelIdx + 1);
       document.getElementById('score-display').textContent = state.score;
       document.getElementById('level-display').textContent = state.levelIdx + 1;
       msg.className = 'message-bar win';
@@ -1265,6 +1266,7 @@ function confirmReveal() {
       state.gameActive = false;
       state.score += 4;
       state.levelIdx += 1;
+      saveRecord(state.wordLen, state.levelIdx + 1);
       document.getElementById('score-display').textContent = state.score;
       document.getElementById('level-display').textContent = state.levelIdx + 1;
       msg.className = 'message-bar win';
@@ -1345,6 +1347,7 @@ function confirmReveal() {
         state.gameActive = false;
         state.score += 4;
         state.levelIdx += 1;
+        saveRecord(state.wordLen, state.levelIdx + 1);
         document.getElementById('score-display').textContent = state.score;
         document.getElementById('level-display').textContent = state.levelIdx + 1;
         msg.className = 'message-bar win';
