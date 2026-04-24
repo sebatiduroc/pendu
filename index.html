@@ -135,6 +135,19 @@
     letter-spacing: 0.05em;
     z-index: 1;
   }
+  .len-btn .record-badge {
+    position: absolute;
+    top: 6px; right: 8px;
+    font-size: 0.6rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #ffe600;
+    letter-spacing: 0.04em;
+    z-index: 2;
+    text-shadow: 0 0 8px rgba(255,230,0,0.7);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .len-btn:hover .record-badge { color: rgba(0,0,0,0.55); text-shadow: none; }
   .len-btn span { position: relative; z-index: 1; }
   .len-btn:hover::before { opacity: 1; }
   .len-btn:hover {
@@ -622,10 +635,10 @@
   <div class="subtitle">Sébastien Dumortier</div>
   <div class="choice-label">Choisissez la longueur du mot</div>
   <div class="length-buttons">
-    <button class="len-btn" data-len="7" data-label="lettres" onclick="startGame(7)"><span>7</span></button>
-    <button class="len-btn" data-len="8" data-label="lettres" onclick="startGame(8)"><span>8</span></button>
-    <button class="len-btn" data-len="9" data-label="lettres" onclick="startGame(9)"><span>9</span></button>
-    <button class="len-btn" data-len="10" data-label="lettres" onclick="startGame(10)"><span>10</span></button>
+    <button class="len-btn" data-len="7" data-label="lettres" onclick="startGame(7)"><span>7</span><span class="record-badge" id="record-7"></span></button>
+    <button class="len-btn" data-len="8" data-label="lettres" onclick="startGame(8)"><span>8</span><span class="record-badge" id="record-8"></span></button>
+    <button class="len-btn" data-len="9" data-label="lettres" onclick="startGame(9)"><span>9</span><span class="record-badge" id="record-9"></span></button>
+    <button class="len-btn" data-len="10" data-label="lettres" onclick="startGame(10)"><span>10</span><span class="record-badge" id="record-10"></span></button>
   </div>
 </div>
 
@@ -744,7 +757,30 @@ function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
-function showChoice() { showScreen('screen-choice'); }
+function showChoice() {
+  updateRecordBadges();
+  showScreen('screen-choice');
+}
+
+// ── RECORDS (localStorage) ──
+function getRecord(len) {
+  return parseInt(localStorage.getItem(`motdix_record_${len}`) || '0', 10);
+}
+function saveRecord(len, level) {
+  const prev = getRecord(len);
+  if (level > prev) {
+    localStorage.setItem(`motdix_record_${len}`, level);
+    return true;
+  }
+  return false;
+}
+function updateRecordBadges() {
+  [7, 8, 9, 10].forEach(len => {
+    const rec = getRecord(len);
+    const el = document.getElementById(`record-${len}`);
+    if (el) el.textContent = rec > 0 ? `★ Niv. ${rec}` : '';
+  });
+}
 
 // ── LOAD DICTIONARY WITH DEFINITIONS ──
 async function loadDict(len) {
@@ -1354,12 +1390,15 @@ function confirmReveal() {
 
 // ── END GAME ──
 function endGame() {
+  // Save record for this word length
+  saveRecord(state.wordLen, state.levelIdx + 1);
   document.getElementById('go-level').innerHTML =
     `Niveau atteint : <strong>${state.levelIdx + 1}</strong>`;
   showScreen('screen-gameover');
 }
 
 window.addEventListener('resize', fitWordSlots);
+updateRecordBadges();
 </script>
 </body>
 </html>
