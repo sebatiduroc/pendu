@@ -1012,7 +1012,7 @@ function guess(letter) {
     msg.className = 'message-bar win';
     msg.textContent = `✓ "${letter}" est dans le mot !`;
 
-    const allRevealed = [...state.word].every(l => state.revealed.has(l));
+    const allRevealed = [...state.word].every((l, i) => state.revealed.has(l) || state.revealedPositions.has(i));
     if (allRevealed) {
       state.gameActive = false;
       state.score += 4;
@@ -1224,7 +1224,7 @@ function confirmReveal() {
     updateJokerBtns();
 
     // Check win
-    const allRevealed = [...state.word].every(l => state.revealed.has(l));
+    const allRevealed = [...state.word].every((l, i) => state.revealed.has(l) || state.revealedPositions.has(i));
     if (allRevealed) {
       state.gameActive = false;
       state.score += 4;
@@ -1304,7 +1304,7 @@ function confirmReveal() {
       wordEl.classList.remove('scratch-mode');
       renderKeyboard();
       updateJokerBtns();
-      const allRevealed2 = [...state.word].every(l => state.revealed.has(l));
+      const allRevealed2 = [...state.word].every((l, i) => state.revealed.has(l) || state.revealedPositions.has(i));
       if (allRevealed2) {
         state.gameActive = false;
         state.score += 4;
